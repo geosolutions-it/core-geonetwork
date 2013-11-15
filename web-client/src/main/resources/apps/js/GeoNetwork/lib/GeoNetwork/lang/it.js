@@ -90,7 +90,7 @@ GeoNetwork.Lang.en = {
     'mf.print.resetPos': "Reimposta",
     'mf.print.print': "Stampa",
     'mf.print.generatingPDF': "Creazione PDF",
-    'mf.print.unableToPrint': "Impossibile stampare, riprovare pi� tardi",
+    'mf.print.unableToPrint': "Impossibile stampare, riprovare più tardi",
     'mf.error': "Errore",
     'selectExtentTooltipTitle': "Selezionare l'estensione",
     'selectExtentTooltipText': "Selezionare l'estensione per la ricerca nel catalogo",
