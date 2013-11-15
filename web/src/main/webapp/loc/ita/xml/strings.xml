@@ -854,14 +854,14 @@
 	<UserAdmin>Utente amministratore</UserAdmin>
 	<userAtLeastOneGroup js="true">Selezionare almeno un gruppo.</userAtLeastOneGroup>
 	<userDefined>- Definito dall'utente -</userDefined>
-	<userInfo>Modifica l'informazione dell'utente</userInfo>
-	<userInfoDes>Permetti all'utente corrente di modificare le proprie informazioni</userInfoDes>
+	<userInfo>Informazioni sull'utente</userInfo>
+	<userInfoDes>Permette all'utente corrente di modificare le proprie informazioni</userInfoDes>
 	<userManagement>Gestione utenti</userManagement>
 	<userManDes>Aggiungi/modifica/elimina e mostra utenti</userManDes>
 	<username>Nome Utente</username>
 	<usernameMandatory>Il campo 'Nome Utente' è obbligatorio.</usernameMandatory>
 	<userPw>Cambia password</userPw>
-	<userPwDes>Permetti all'utente corrente di cambiare la password</userPwDes>
+	<userPwDes>Permette all'utente corrente di cambiare la password</userPwDes>
 	<uuidAction>Importa azioni:</uuidAction>
 	<validate>Valida</validate>
 	<assign>Assegna al catalogo corrente</assign>
