@@ -165,8 +165,8 @@
 	<publishLayerAdded js="true">Livello aggiunto alla mappa di anteprima.</publishLayerAdded>
 	<unpublish js="true">Revoca</unpublish>
 	<unpublishTooltip js="true">Rimuovi il dataset corrente dal nodo remoto.</unpublishTooltip>
-	<unpublishError js="true">Rimozione fallita.</unpublishError>
-	<unpublishSuccess js="true">Rimozione effettuata.</unpublishSuccess>
+	<unpublishError js="true">Revoca fallita.</unpublishError>
+	<unpublishSuccess js="true">Revoca effettuata.</unpublishSuccess>
 	<check js="true">Controlla</check>
 	<errorConnectionRefused js="true">Connessione rifiutata.</errorConnectionRefused>
 	<errorDatasetNotFound js="true">Dataset non trovato.</errorDatasetNotFound>
@@ -334,7 +334,7 @@
 	<anyThesaurus js="true">Ogni thesaurus</anyThesaurus>
 	<selectedKeywords js="true">Parole chiave selezionate</selectedKeywords>
 	<foundKeywords js="true">Parole chiave disponibili</foundKeywords>
-	<keywordSelectionWindowTitle js="true">Seleziona parole chiave</keywordSelectionWindowTitle>
+	<keywordSelectionWindowTitle js="true">Seleziona le parole chiave</keywordSelectionWindowTitle>
 	<crsSelectionWindowTitle js="true">Seleziona un sistema di riferimento</crsSelectionWindowTitle>
 	<selectedCRS js="true">Sistemi di riferimento selezionati</selectedCRS>
 	<foundCRS js="true">Sistemi di riferimento disponibili</foundCRS>
