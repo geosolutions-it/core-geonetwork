@@ -381,8 +381,8 @@
 		<description>Descrizione di un elemento dei metadati a testo libero multi-lingue</description>
 	</element>
 	<element name="gmd:RS_Identifier" id="208.0">
-		<description>Identificatore del sistema di riferimento</description>
 		<label>Identificatore</label>
+		<description>Identificatore del sistema di riferimento</description>		
 	</element>
 	<element name="gmd:URL" id="608.0">
 		<label>URL</label>
@@ -608,7 +608,7 @@
 	</element>
 	<element name="gmd:contactInfo" id="378.0">
 		<description>Indirizzo dell’organizzazione responsabile</description>
-		<label>Informazioni per contattare l’Ente</label>
+		<label>Informazioni per contattare l’ente</label>
 	</element>
 	<element name="gmd:contactInstructions" id="392.0">
 		<label>Istruzioni di contatto</label>
