@@ -31,8 +31,8 @@
         I valori di MD_ScopeCode nell'ambito della 
         direttiva (Vedi SC4 in 1.2) sono:
         <ul>
-            <li>dataset per datasets spaziali;</li>
-            <li>serie per serie di dataset spaziali;</li>
+            <li>dataset per dataset spaziali;</li>
+            <li>serie per serie spaziali;</li>
             <li>servizi per servizi di dati spaziali.</li>
         </ul> 
 	La proprietà <i>hierarchyLevel</i> non è obbligatoria secondo l'ISO
@@ -43,7 +43,7 @@
     <alert.M38><div><h2>Identificatore univoco della risorsa mancante</h2>
         <br/>
         <b>Istruzioni di implementazione:</b><br/>
-        Obbligatorio per detaset e serie di dataset.<br/>
+        Obbligatorio per dataset e serie.<br/>
         <b>Esempio:</b> 527c4cab-070c-4bca-9aaf-92bece7be902
     </div></alert.M38>
     <report.M38><div>L'identificatore univoco della risorsa è:</div></report.M38>
@@ -67,7 +67,7 @@
     <alert.M41><div><h2>INSPIRE - Il bounding box geografico è obbligatorio</h2><br/>
         <ul>
             <li>
-                Obbligatorio per dataset spaziali e serie di dataset.
+                Obbligatorio per dataset spaziali e serie.
             </li>
             <li>
                 Condizionale per servizi spaziali: Obbligatorio per servizi con
@@ -134,7 +134,7 @@
     
     <alert.M43><div><h2>INSPIRE - L'origine è obbligatorio</h2><br/>
         <ul>
-            <li>Obbligatorio per dataset spaziali e serie di dataset spaziali.</li>
+            <li>Obbligatorio per dataset spaziali e serie spaziali.</li>
             <li>Non applicabile ai servizi.</li>
         </ul>
         In aggiunta alla spiegazione generale riguardo alla genealogia del dataset 
@@ -221,7 +221,7 @@
     <alert.M51><div><h2>INSPIRE (servizio) - Risorsa collegata è obbligatorio se il collegamento ai dataset su cui il servizio opera sono disponibili</h2>
         <br/>
         <b>Istruzioni di implementazione:</b><br/>
-        Non applicabile a dataset e serie di dataset<br/>
+        Non applicabile a dataset e serie<br/>
         Condizionale nei servizi: Obbligatorio se il collegamento ai dataset su cui il servizio opera sono disponibili.<br/>
         
         <ul>
@@ -283,33 +283,33 @@
         ISO 639-2.
     </div></alert.M55>
     <report.M55><div>Resource language is:</div></report.M55>
-    <alert.M56><div><h2>INSPIRE - Spatial resolution is mandatory if an equivalent scale or a resolution distance can be specified</h2><br/>
+    <alert.M56><div><h2>INSPIRE - Risoluzione spaziale è obbligatorio se una scala equivalente o una distanza di risoluzione possono essere specificati</h2><br/>
         <b>Istruzioni di implementazione:</b>
         <ul>
             <li>
-                Each spatial resolution is either an equivalent scale OR a ground
-                sample distance.                
+                Ogni risoluzione spaziare è Each spatial resolution is o una scala equivalente OPPURE 
+                una distanza di esempio sul terreno.
             </li>
             <li>
-                When two equivalent scales or two ground sample distances are
-                expressed, the spatial resolution is an interval bounded by these two
-                values.                
+            	Quando sono espresse due scale equivalenti o due distanze di esempio 
+            	sul terreno, la risoluzione spaziale è un intervallo delimitato da questi
+            	due valori.            
             </li>
         </ul>
-        <b>Esempio:</b> 5000 (e.g. 1:5000 scale map)
+        <b>Esempio:</b> 5000 (mappa in scala 1:5000)
     </div></alert.M56>
-    <report.M56><div>Spatial resolution is set.</div></report.M56>
+    <report.M56><div>Risoluzione spaziale è impostata.</div></report.M56>
     
-    <alert.M57><div><h2>[ISO19119 for services] - OperationName is mandatory</h2></div></alert.M57>
+    <alert.M57><div><h2>[ISO19119 per i servizi] - OperationName è obbligatorio</h2></div></alert.M57>
     
-    <alert.M58><div>Missing service taxonomy information (select on or more keyword from "inspire-service-taxonomy.rdf" thesaurus)</div></alert.M58>
-    <report.M58><div> service taxonomy classification defined.</div></report.M58>
-    <alert.M59><div><h2>[ISO19119 for services] - ConnectPoint is mandatory</h2></div></alert.M59>
-    <alert.M60><div><h2>[ISO19119 for services] - ServiceType is mandatory</h2><br/>
-        Mandatory for services.<br/>
-        Not applicable to dataset and dataset series<br/>
-        <b>Esempio:</b> 'view', 'discovery', 'download', 'transformation', 'invoke', 'other'
+    <alert.M58><div>Informazioni sulla tassonomia dei servizi mancante (seleziona una o più parole chiave dal thesaurus "inspire-service-taxonomy.rdf")</div></alert.M58>
+    <report.M58><div> Classificazione tassonomia dei servizi definita.</div></report.M58>
+    <alert.M59><div><h2>[ISO19119 per i servizi] - ConnectPoint è obbligatorio</h2></div></alert.M59>
+    <alert.M60><div><h2>[ISO19119 per i servizi] - ServiceType è obbligatorio</h2><br/>
+        Mandatory per i servizi.<br/>
+        Non applicabile a dataset e serie<br/>
+        <b>Esempio:</b> 'consultazione', 'ricerca', 'scaricamento', 'conversione', 'richiesta', 'altri'
     </div></alert.M60>
-    <report.M60><div>Service type is:</div></report.M60>
+    <report.M60><div>Tipo di servizio :</div></report.M60>
     <!-- INSPIRE metadata rules translation / END -->
 </strings>
