@@ -266,28 +266,29 @@
         Classificazione:
         <b>Esempio:</b> riservato (non per la divulgazione pubblica)
         <br/>
-        Limitazione d'usoUse limitation:
+        Limitazione d'uso:
         <b>Esempio:</b> da non usare per la navigazione
         <br/>
     </div></alert.M53>
-    <alert.M54><div><h2>INSPIRE - The value of accessConstraints is otherRestrictions, if and only if they are instances of otherConstraints expressing limitations on public access</h2></div></alert.M54>
-    <alert.M55><div><h2>INSPIRE (datasets and series) - Resource language is mandatory if the resource includes textual information</h2><br/>
-        An instance of the language property is mandated by ISO
-        19115 ; it can be defaulted to the value of the Metadata
+    <alert.M54><div><h2>INSPIRE - Il valore di accessConstraints è otherRestrictions, 
+    	se e solo se ci sono istanze di otherConstraints 
+    	che esprimono limitazioni al pubblico accesso</h2></div></alert.M54>
+    <alert.M55><div><h2>INSPIRE (dataset e serie) - Lingua della risorsa è obbligatorio 
+    	se la risorsa include informazioni testuali</h2><br/>
+        Una istanza della proprietà lingua è necessaria per ISO 19115; 
+        il suo valore di default può essere il valore del metadato
         <b>Istruzioni di implementazione:</b><br/> 
-        Language when the dataset or the dataset series does not
-        contain textual information.
+        Lingua quando il dataset o la serie non contiene informazioni testuali.
         <br/>
         <b>Istruzioni di implementazione:</b><br/>
-        Codelist (See ISO/TS 19139) based on alpha-3 codes of
-        ISO 639-2.
+        Codelist (Vedi ISO/TS 19139) basato sui codici alpha-3 di ISO 639-2.
     </div></alert.M55>
-    <report.M55><div>Resource language is:</div></report.M55>
+    <report.M55><div>Lingua della risorsa è:</div></report.M55>
     <alert.M56><div><h2>INSPIRE - Risoluzione spaziale è obbligatorio se una scala equivalente o una distanza di risoluzione possono essere specificati</h2><br/>
         <b>Istruzioni di implementazione:</b>
         <ul>
             <li>
-                Ogni risoluzione spaziare è Each spatial resolution is o una scala equivalente OPPURE 
+                Ogni risoluzione spaziare è una scala equivalente OPPURE 
                 una distanza di esempio sul terreno.
             </li>
             <li>

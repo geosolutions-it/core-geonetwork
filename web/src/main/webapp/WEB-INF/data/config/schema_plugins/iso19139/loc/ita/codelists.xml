@@ -298,7 +298,7 @@
 		<entry>
 			<code>source</code>
 			<label>Fonte</label>
-			<description> Informazioni su mappe e grafici da cui derivano i contenuti del dataset.</description>
+			<description>Informazioni su mappe e grafici da cui derivano i contenuti del dataset.</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
@@ -856,8 +856,7 @@
 		<entry>
 			<code>heavySmokeOrDust</code>
 			<label>Presenza di fumo pesante o polvere</label>
-			<description>Parte dell'immagine è parzialmente oscurata fumo pesante o
-polvere</description>
+			<description>Parte dell'immagine è parzialmente oscurata fumo pesante o polvere</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
