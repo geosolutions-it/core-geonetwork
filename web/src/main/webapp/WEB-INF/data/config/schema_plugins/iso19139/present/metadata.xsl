@@ -3872,7 +3872,8 @@
                   <xsl:variable name="ref" select="gco:CharacterString/geonet:element/@ref" />
                   <input onfocus="javascript:showLinkedMetadataSelectionPanel('{$ref}', '');"
 	                    	class="md" type="text" name="_{$ref}" id="_{$ref}" value="{gco:CharacterString/text()}" size="20" />
-	                <img src="../../images/find.png" alt="{/root/gui/strings/parentSearch}" onclick="javascript:showLinkedMetadataSelectionPanel('{$ref}', '');">
+	                <img src="../../images/clear_left.png" alt="{/root/gui/strings/delete}" onclick="document.getElementById('_{$ref}').value=''" />
+	                &#160;<img src="../../images/find.png" alt="{/root/gui/strings/parentSearch}" onclick="javascript:showLinkedMetadataSelectionPanel('{$ref}', '');">
 										<xsl:choose>
 											<xsl:when test="name()='gmd:parentIdentifier'">
 												<xsl:attribute name="title">
