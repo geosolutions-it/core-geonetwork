@@ -21,6 +21,7 @@
     "andNodeLogo": " and logo",
     "applyXSLToRecord": "XSL transformation to apply",
     "applyXSLToRecordHelp": "The referenced XSL transform will be applied to each metadata record before it is added to Geonetwork",
+    "applyXSLTBeforeSchemaDetection": "Apply XSL Transformation before schema detection",
     "arcsde-database": "Database",
     "arcsde-databaseHelp": "The ArcSDE database name",
     "arcsde-port": "Port",

@@ -21,6 +21,7 @@ var gnHarvestercsw = {
         "xpathFilter" : "",
         "rejectDuplicateResource" : false,
         "xslfilter": [],
+        "applyXslBeforeSchemaDetection" : false,
         "outputSchema": "http://www.isotc211.org/2005/gmd",
         "queryScope": "local",
         "hopCount": 2
@@ -89,6 +90,7 @@ var gnHarvestercsw = {
       + '    </account>'
       + '    <xpathFilter>' + h.site.xpathFilter + '</xpathFilter>'
       + '    <xslfilter>' + h.site.xslfilter + '</xslfilter>'
+      + '    <applyXslBeforeSchemaDetection>' + h.site.applyXslBeforeSchemaDetection + '</applyXslBeforeSchemaDetection>'
       + '    <outputSchema>' + h.site.outputSchema + '</outputSchema>'
       + '    <queryScope>' + h.site.queryScope + '</queryScope>'
       + '    <hopCount>' + h.site.hopCount + '</hopCount>'

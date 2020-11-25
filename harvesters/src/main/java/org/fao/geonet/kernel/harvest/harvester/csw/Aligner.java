@@ -291,6 +291,10 @@ public class Aligner extends BaseAligner<CswParams> {
             return;
         }
 
+        if (params.applyXslBeforeSchemaDetection && !params.xslfilter.equals("")) {
+            md = processMetadata(context, md, processName, processParams);
+        }
+
         String schema = dataMan.autodetectSchema(md, null);
         if (schema == null) {
             log.debug("  - Metadata skipped due to unknown schema. uuid:" + ri.uuid);
@@ -310,8 +314,11 @@ public class Aligner extends BaseAligner<CswParams> {
         log.debug("  - Adding metadata with remote uuid:" + ri.uuid + " schema:" + schema);
 
         String mdUuid = ri.uuid;
-        if (!params.xslfilter.equals("")) {
+        if (!params.applyXslBeforeSchemaDetection && !params.xslfilter.equals("")) {
             md = processMetadata(context, md, processName, processParams);
+        }
+
+        if (!params.xslfilter.equals("")){
             // Get new uuid if modified by XSLT process
             mdUuid = metadataUtils.extractUUID(schema, md);
             if (mdUuid == null) {
