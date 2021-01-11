@@ -28,6 +28,7 @@ import static org.fao.geonet.api.ApiParams.API_CLASS_RECORD_TAG;
 import static org.fao.geonet.api.ApiParams.API_PARAM_RECORD_UUIDS_OR_SELECTION;
 
 import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Set;
 
 import javax.annotation.PostConstruct;
@@ -198,6 +199,7 @@ public class ValidateApi {
                             new RecordValidationTriggeredEvent(record.getId(), ApiUtils.getUserSession(request.getSession()).getUserIdAsInt(), "1").publish(applicationContext);
                         } else {
                             report.addMetadataInfos(record.getId(), "Is invalid");
+                            setReportErrorMessages(report, record);
                             new RecordValidationTriggeredEvent(record.getId(), ApiUtils.getUserSession(request.getSession()).getUserIdAsInt(), "0").publish(applicationContext);
                         }
                         report.addMetadataId(record.getId());
@@ -280,4 +282,33 @@ public class ValidateApi {
         mAnalyseProcesses.addFirst(mAnalyseProcess);
         return mAnalyseProcess;
     }
+
+   private void setReportErrorMessages(SimpleMetadataProcessingReport report, AbstractMetadata record) {
+      List<MetadataValidation> mvList = metadataValidationRepository.findAllById_MetadataId(record.getId());
+      for (MetadataValidation mv : mvList) {
+         String message = buildErrorMessage(mv);
+         if(message != null) {
+            report.addMetadataError(record.getId(), buildErrorMessage(mv));
+         }
+      }
+   }
+
+   private String buildErrorMessage(MetadataValidation mv) {
+      int nFailures = mv.getNumFailures();
+      if (nFailures > 0) {
+         String validationType = mv.getId().getValidationType();
+         validationType = validationType != null ? validationType : "UNKNOWN";
+         StringBuilder message = new StringBuilder(" Validation failed: ")
+                .append(validationType)
+                .append(" (")
+                .append(nFailures)
+                .append(" error");
+         if (nFailures > 1) {
+            message.append("s");
+         }
+         message.append(")");
+         return message.toString();
+      }
+      return null;
+   }
 }
