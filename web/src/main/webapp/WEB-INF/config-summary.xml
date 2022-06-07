@@ -114,7 +114,14 @@
     <facet name="recordOwner" indexKey="recordOwner" label="recordOwner"/>
     <facet name="groupOwner" indexKey="_groupOwner" label="groupOwners"/>
     <facet name="publishedForGroup" indexKey="_groupPublished" label="publishedForGroup"/>
-	  <facet name="isPublishedToAll" indexKey="_isPublishedToAll" label="isPublishedToAll" />
+	<facet name="isPublishedToAll" indexKey="_isPublishedToAll" label="isPublishedToAll" />
+
+    <facet name="zamg_sourcetype_uri" indexKey="zamg_sourcetype_uri" label="facets_zamg_sourcetype" />
+    <facet name="zamg_datatype_uri"   indexKey="zamg_datatype_uri"   label="facets_zamg_datatype" />
+    <facet name="zamg_uom_uri"        indexKey="zamg_uom_uri"        label="facets_zamg_uom" />
+    <facet name="zamg_variable_uri"   indexKey="zamg_variable_uri"   label="facets_zamg_variable" />
+    <facet name="zamg_mdtarget_uri"   indexKey="zamg_mdtarget_uri"   label="facets_zamg_mdtarget" />
+
     <!--
     Example configuration for hierarchical facet based on
     the GeoNetwork region thesaurus or GEMET.
@@ -137,6 +144,13 @@
 
   <summaryTypes>
     <summaryType name="details" format="DIMENSION">
+
+      <item facet="zamg_sourcetype_uri" sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/sourcetype"/>
+      <item facet="zamg_datatype_uri"   sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/datatype"/>
+      <item facet="zamg_uom_uri"        sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/uom"/>
+      <item facet="zamg_variable_uri"   sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/variable"/>
+      <item facet="zamg_mdtarget_uri"   sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/mdtarget"/>
+
       <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
       <item facet="mdActions"/>
       <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="20"/>
@@ -167,6 +181,13 @@
     </summaryType>
 
     <summaryType name="manager" format="DIMENSION">
+      <item facet="zamg_sourcetype_uri" sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/sourcetype"/>
+      <item facet="zamg_datatype_uri"   sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/datatype"/>
+      <item facet="zamg_uom_uri"        sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/uom"/>
+      <item facet="zamg_variable_uri"   sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/variable"/>
+      <item facet="zamg_mdtarget_uri"   sortBy="value" sortOrder="desc" translator="term:http://geonetwork-opensource.org/zamg/mdtarget"/>
+
+
       <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
       <item facet="category" max="99" sortBy="value"
             translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gml="http://www.opengis.net/gml#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Scheme -->
+  <skos:ConceptScheme rdf:about="http://geonetwork-opensource.org/zamg/mdtarget">
+    <dc:title>ZAMG - Target Plattform for ZAMG metadata</dc:title>
+    <dc:description>Keyword indicating Target Plattform for ZAMG metadatasets to be used in rules for virtual csw endpoints</dc:description>
+    <dc:creator>
+      <foaf:Organization>
+        <foaf:name>ZAMG</foaf:name>
+      </foaf:Organization>
+    </dc:creator>
+    <dc:rights>Free to all for non commercial use.</dc:rights>
+    <dcterms:issued>2016-02-11 10:31:00</dcterms:issued>
+    <dcterms:modified>2016-02-11 10:31:00</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#inspire-dataset">
+    <skos:altLabel>inspire-dataset</skos:altLabel>
+    <skos:prefLabel xml:lang="de">INSPIRE Dataset</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">INSPIRE Dataset</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#inspire-service">
+    <skos:altLabel>inspire-service</skos:altLabel>
+    <skos:prefLabel xml:lang="de">INSPIRE Service</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">INSPIRE Service</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#ogd-dataset">
+    <skos:altLabel>ogd-dataset</skos:altLabel>
+    <skos:prefLabel xml:lang="de">OGD Dataset</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">OGD Dataset</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#ogd-service">
+    <skos:altLabel>ogd-service</skos:altLabel>
+    <skos:prefLabel xml:lang="de">OGD Service</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">OGD Service</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#ccca-dataset">
+    <skos:altLabel>ccca-dataset</skos:altLabel>
+    <skos:prefLabel xml:lang="de">CCCA Dataset</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">CCCA Dataset</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#ccca-service">
+    <skos:altLabel>ccca-service</skos:altLabel>
+    <skos:prefLabel xml:lang="de">CCCA Service</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">CCCA Service</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#gcos-dataset">
+    <skos:altLabel>gcos-dataset</skos:altLabel>
+    <skos:prefLabel xml:lang="de">GCOS Dataset</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">GCOS Dataset</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/mdtarget#gcos-service">
+    <skos:altLabel>gcos-service</skos:altLabel>
+    <skos:prefLabel xml:lang="de">GCOS Service</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">GCOS Service</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>
+

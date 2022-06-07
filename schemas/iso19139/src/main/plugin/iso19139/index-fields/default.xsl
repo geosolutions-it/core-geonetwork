@@ -331,6 +331,76 @@
         <xsl:variable name="listOfKeywords"
                       select="gmd:keyword/gco:CharacterString|
                                         gmd:keyword/gmx:Anchor"/>
+                <xsl:choose>
+                    <xsl:when test="starts-with(string(./gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()), 'geonetwork.thesaurus.external.theme.zamg')">
+                        <xsl:variable name="thesaurusAnchor" select="lower-case(string(./gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor))"/>
+
+                        <xsl:variable name="basename"  select="substring-after($thesaurusAnchor, 'zamg-')"/>
+                        <xsl:variable name="zamgname" select="concat('zamg_', $basename)"/>
+
+                        <xsl:variable name="zamg-thesaurus-file" select="concat('file:///', $thesauriDir, '/external/thesauri/theme/zamg-',$basename,'.rdf')"/>
+                        <!--<xsl:message>Loading ZAMG thesaurus from <xsl:value-of select="$zamg-thesaurus-file"/></xsl:message>-->
+                        <xsl:variable name="zamg-thesaurus" select="document($zamg-thesaurus-file)"/>
+                        <xsl:choose>
+                            <xsl:when test="$zamg-thesaurus">
+
+                                <xsl:variable name="zamg-concepts" select="$zamg-thesaurus//skos:Concept"/>
+                                <!--<xsl:message>ZAMG thesaurus <xsl:value-of select="$basename"/> has <xsl:value-of select="count($zamg-concepts)"/> concepts</xsl:message>-->
+
+                                <xsl:for-each select="gmd:keyword/gco:CharacterString">
+                                    <xsl:variable name="keyword" select="string(.)"/>
+
+                                    <xsl:variable name="uri-from-altlabel"  select="$zamg-concepts[skos:altLabel = $keyword]/@rdf:about"/>
+                                    <xsl:variable name="uri-from-preflabel"  select="$zamg-concepts[skos:prefLabel = $keyword]/@rdf:about"/>
+                                    <xsl:variable name="uri-from-about"     select="$zamg-concepts[ends-with(@rdf:about, concat('#', $keyword))]/@rdf:about"/>
+                                    <xsl:variable name="zamg-concept-uri"   select="if($uri-from-about) then $uri-from-about else if($uri-from-altlabel) then $uri-from-altlabel else $uri-from-preflabel[1]"/>
+                                    <!--<xsl:variable name="zamg-concept-uri"  select="$zamg-concepts[skos:altLabel = $keyword]/@rdf:about"/>-->
+
+<xsl:message>INFO: KEYWORD: <xsl:value-of select="$keyword"/> URI: <xsl:value-of select="$zamg-concept-uri"/></xsl:message>
+
+                                    <xsl:if test="not($uri-from-about) and $uri-from-altlabel">
+                                        <xsl:message>INFO: using legacy info from altLabel: <xsl:value-of select="$keyword"/></xsl:message>
+                                    </xsl:if>
+                                    <xsl:if test="not($uri-from-about) and not($uri-from-altlabel) and $uri-from-preflabel">
+                                        <xsl:message>INFO: using inferred info from prefLabel: <xsl:value-of select="$keyword"/></xsl:message>
+                                    </xsl:if>
+
+                                    <xsl:variable name="inspire-thesaurus" select="if ($inspire!='false') then document(concat('file:///', $thesauriDir, '/external/thesauri/theme/inspire-theme.rdf')) else ''"/>
+
+                                    <xsl:choose>
+                                        <xsl:when test="not($zamg-concept-uri)">
+                                            <xsl:message>WARN: no Concept named <xsl:value-of select="$keyword"/> found in thesaurus <xsl:value-of select="$zamgname"/></xsl:message>
+                                        </xsl:when>
+                                        <xsl:when test="ends-with($zamg-concept-uri, '#none')">
+                                            <xsl:message>INFO: skipping 'none' selection in thesaurus <xsl:value-of select="$zamgname"/></xsl:message>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:variable name="zamg-concept-anchor" select="substring-after($zamg-concept-uri,'#')"/>
+                                            <xsl:message>INFO: adding field zamgname[<xsl:value-of select="$zamgname"/>] keyword[<xsl:value-of select="$keyword"/>] anchor[<xsl:value-of select="$zamg-concept-anchor"/>] uri[<xsl:value-of select="$zamg-concept-uri"/>]</xsl:message>
+
+                                            <Field name="{$zamgname}"        string="{lower-case($keyword)}"             store="true" index="true"/>
+                                            <Field name="{$zamgname}_uri"    string="{$zamg-concept-uri}"                store="true" index="true"/>
+                                            <Field name="{$zamgname}_anchor" string="{lower-case($zamg-concept-anchor)}" store="true" index="true"/>
+
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            </xsl:when>
+                            <xsl:otherwise> <!-- thesaurus not found -->
+                                <xsl:message>WARN: ZAMG thesaurus <xsl:value-of select="$basename"/> NOT FOUND, expected at <xsl:value-of select="$zamg-thesaurus-file"/></xsl:message>
+
+                                <!-- Index all keywords as if normal keyword -->
+                                <xsl:for-each select="$listOfKeywords">
+                                    <xsl:variable name="keyword" select="string(.)"/>
+                                    <Field name="keyword" string="{$keyword}" store="true" index="true"/>
+                                </xsl:for-each>
+
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise> <!-- not a zamg keyword-->
+
+
         <xsl:variable name="thesaurusName" select="gmd:thesaurusName/gmd:CI_Citation/gmd:title/*[1]"/>
 
         <xsl:for-each select="$listOfKeywords">
@@ -386,6 +456,10 @@
             </xsl:if>
           </xsl:if>
         </xsl:for-each>
+           </xsl:otherwise><!-- not a zamg keyword-->
+       </xsl:choose>
+
+
 
         <!-- Index thesaurus name to easily search for records
         using keyword from a thesaurus. -->
@@ -853,6 +927,27 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- === General stuff === -->
     <!-- Metadata type  -->
+
+        <xsl:choose>
+          <xsl:when test="gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode[@codeListValue='restricted'] or
+                          gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/text()='restricted'">
+            <Field name="zamg_public" string="false" store="false" index="true" />
+            <xsl:message>PUBLIC: Metadata is restricted</xsl:message>
+          </xsl:when>
+          <xsl:when test="gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode[@codeListValue='license'] or
+                          gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/text()='license'">
+            <Field name="zamg_public" string="true" store="false" index="true" />
+            <xsl:message>PUBLIC: Access is public</xsl:message>
+          </xsl:when>
+          <xsl:when test="gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints[gmd:accessConstraints/gmd:MD_RestrictionCode/@codeListValue='otherRestrictions']/gmd:otherConstraints/gco:CharacterString/text()='keine'">
+            <Field name="zamg_public" string="true" store="false" index="true" />
+            <xsl:message>PUBLIC: Access is public (imported)</xsl:message>
+          </xsl:when>
+          <xsl:otherwise>
+            <Field name="zamg_public" string="false" store="false" index="true" />
+            <xsl:message>PUBLIC: Metadata public state is unknown</xsl:message>
+          </xsl:otherwise>
+        </xsl:choose>
 
     <!-- Metadata on maps -->
     <xsl:variable name="isDataset"

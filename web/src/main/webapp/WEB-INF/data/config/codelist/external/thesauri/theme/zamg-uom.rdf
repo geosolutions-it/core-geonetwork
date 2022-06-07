@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gml="http://www.opengis.net/gml#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Scheme -->
+  <skos:ConceptScheme rdf:about="http://geonetwork-opensource.org/zamg/uom">
+    <dc:title>ZAMG - Unity of Measure</dc:title>
+    <dc:description>Unity of measure used in ZAMG datasets</dc:description>
+    <dc:creator>
+      <foaf:Organization>
+        <foaf:name>ZAMG</foaf:name>
+      </foaf:Organization>
+    </dc:creator>
+    <dc:rights>Free to all for non commercial use.</dc:rights>
+    <dcterms:issued>2014-11-11 00:00:00</dcterms:issued>
+    <dcterms:modified>2015-05-04 08:15:00</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/lenght#m">
+    <skos:altLabel>uom_len_m</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Length: meter</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Länge: meter</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/lenght#cm" />
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/lenght#km" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/lenght#cm">
+    <skos:altLabel>uom_len_cm</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Length: cm</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Länge: cm</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/lenght#mm" />
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/lenght#m" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/lenght#mm">
+    <skos:altLabel>uom_len_mm</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Length: mm</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Länge: mm</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/lenght#um" />
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/lenght#cm" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/lenght#um">
+    <skos:altLabel>uom_len_um</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Length: micron</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Länge: micron</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/lenght#cm" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/lenght#km">
+    <skos:altLabel>uom_len_km</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Length: km</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Länge: km</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/lenght#m" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/mass#kg">
+    <skos:altLabel>uom_mas_kg</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Mass: kg</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Masse: kg</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/mass#g" />
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/mass#g">
+    <skos:altLabel>uom_mas_g</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Mass: g</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Masse: g</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/mass#kg" />
+  </skos:Concept>
+
+  <!-- velocity -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/velocity#ms">
+    <skos:altLabel>uom_vel_ms</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Geschwindigkeit: Meter pro Sekunde [m/s]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Velocity: meter per second [m/s]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/velocity#cms" />
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/velocity#kmh" />
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/velocity#cms">
+    <skos:altLabel>uom_vel_cms</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Geschwindigkeit: Zentimeter pro Sekunde [cm/s]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Velocity: centimeter per second [cm/s]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/velocity#ms" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/velocity#kmh">
+    <skos:altLabel>uom_vel_kmh</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Geschwindigkeit: Kilometer pro Stunde [km/h]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Velocity: kilometer per hour [km/h]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/velocity#ms" />
+  </skos:Concept>
+
+  <!-- temperature -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/temperature#degC">
+    <skos:altLabel>uom_tem_degc</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Temperatur: Grad Celsius [°C]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Temperature: degrees Celsius [°C]</skos:prefLabel>
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/temperature#K">
+    <skos:altLabel>uom_tem_k</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Temperatur: Kelvin [K]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Temperature: kelvin [K]</skos:prefLabel>
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/temperature#F">
+    <skos:altLabel>uom_tem_f</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Temperatur: Fahrenheit [F]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Temperature: fahrenheit [F]</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- radiation -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/radiation#Jcm2min">
+    <skos:altLabel>uom_rad_jcm2min</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Strahlung: Joule pro Quadratzentimeter Minute [J/(cm²*min)]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Radiation: Joule per squarecentimeter minute [J/(cm²*min)]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/radiation#Jcm2h" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/radiation#Jcm2h">
+    <skos:altLabel>uom_rad_jcm2h</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Strahlung: Joule pro Quadratzentimeter Stunde [J/(cm²*h)]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Radiation: Joule per squarecentimeter hour [J/(cm²*h)]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/radiation#Jcm2min" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/radiation#Wm2">
+    <skos:altLabel>uom_rad_wm2</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Strahlung: Watt pro Quadratmeter [W/m²]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Radiation: Watt per squaremeter [W/m²]</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/radiation#mV">
+    <skos:altLabel>uom_rad_mw</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Strahlung: Millivolt [mV]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Radiation: millivolt [mV]</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/radiation#kgms2">
+    <skos:altLabel>uom_rad_kgms2</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Strahlung: Kilogramm pro Meter Quadratsekunde [kg/(m*s²)]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Radiation: kilogram per meter squaresecond [kg/(m*s²)]</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- precipitation -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/precipitation#mm">
+    <skos:altLabel>uom_pre_mm</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Niederschlag: Millimeter [mm]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Precipitation: millimeter [mm]</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- snow -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/snow#cm">
+    <skos:altLabel>uom_sno_cm</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Schnee: Zentimeter [cm]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Snow: centimeter [cm]</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- cloudiness -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/cloudiness#percent">
+    <skos:altLabel>uom_clo_percent</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Bewölkung: Prozent [%]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Cloudiness: percent [%]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/cloudiness#tenth" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/cloudiness#tenth">
+    <skos:altLabel>uom_clo_tenth</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Bewölkung: Zehntel [1/10]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Cloudiness: tenth [1/10]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/cloudiness#percent" />
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/cloudiness#eighth" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/cloudiness#eighth">
+    <skos:altLabel>uom_clo_eighth</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Bewölkung: Achtel [1/8]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Cloudiness: eighth [1/8]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/cloudiness#tenth" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/cloudiness#m">
+    <skos:altLabel>uom_clo_m</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Bewölkung: Meter [m]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Cloudiness: meter [m]</skos:prefLabel>    
+  </skos:Concept>
+
+  <!-- humidity -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/humidity#g_per_kg">
+    <skos:altLabel>uom_hum_g_per_kg</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Feuchte: Gramm pro Kilogramm [g/kg]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Humidity: gram per kilogram [g/kg]</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/humidity#permill">
+    <skos:altLabel>uom_hum_permill</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Feuchte: Promille [‰]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Humidity: per mill [‰]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/humidity#percent" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/humidity#percent">
+    <skos:altLabel>uom_hum_percent</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Feuchte: Prozent [%]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Humidity: percent [%]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/humidity#permill" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/humidity#volpercent">
+    <skos:altLabel>uom_hum_volpercent</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Feuchte: Volumsprozent [VOL %]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Humidity: volume fraction [VOL %]</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- visibility range -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/visibility_range#meter">
+    <skos:altLabel>uom_vis_m</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Sichtweite: Meter [m]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">visibility range: meter [m]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/visibility_range#kilometer" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/visibility_range#kilometer">
+    <skos:altLabel>uom_vis_km</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Sichtweite: Kilometer [km]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">visibility range: kilometer [km]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/visibility_range#meter" />
+  </skos:Concept>
+
+  <!-- sunshine duration -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/sunshine_duration#minutes">
+    <skos:altLabel>uom_sdu_min</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Sonnenscheindauer: Minuten [min]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">sunshine duration: minutes [min]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/sunshine_duration#hours" />
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/sunshine_duration#hours">
+    <skos:altLabel>uom_sdu_hours</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Sonnenscheindauer: Stunden [h]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">sunshine duration: hours [h]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/sunshine_duration#minutes" />
+  </skos:Concept>
+
+  <!-- gas- and particle-concentration -->
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#volpercent">
+    <skos:altLabel>uom_gpc_volpercent</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Volumsprozent [VOL %]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: volume fraction [VOL %]</skos:prefLabel>
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#mg_per_sec">
+    <skos:altLabel>uom_gpc_mg_per_sec</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Milligramm pro Sekunde [mg/s]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: milligram per second [mg/s]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/gas_particle_concentration#kg_per_h" />
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#kg_per_h">
+    <skos:altLabel>uom_gpc_kg_per_hour</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Kilogramm pro Stunde [kg/h]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: kilogram per hour [kg/h]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/gas_particle_concentration#mg_per_sec" />
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#mg_per_cubicmeter">
+    <skos:altLabel>uom_gpc_mg_per_m3</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Milligramm pro Kubicmeter [mg/m³]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: milligram per cubicmeter [mg/m³]</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#parts_per_million">
+    <skos:altLabel>uom_gpc_parts_per_million</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Parts per Million [ppm]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: Parts per Million [ppm]</skos:prefLabel>
+    <skos:broader rdf:resource="http://geonetwork-opensource.org/uom/gas_particle_concentration#parts_per_billion" />
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#parts_per_billion">
+    <skos:altLabel>uom_gpc_parts_per_billion</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Parts per Billion [ppb]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: Parts per Billion [ppb]</skos:prefLabel>
+    <skos:narrower rdf:resource="http://geonetwork-opensource.org/uom/gas_particle_concentration#parts_per_million" />
+  </skos:Concept>  
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom/gas_particle_concentration#cubicmeter_per_hour">
+    <skos:altLabel>uom_gpc_m3_per_hour</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikelkonzentration: Kubicmeter pro Stunde [m³/h]</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">gas- and particle-concentration: cubicmeter per hour [m³/h]</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- Item not set or known -->
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/uom#none">
+    <skos:altLabel>none</skos:altLabel>
+    
+    <skos:prefLabel xml:lang="de">keine Information</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Not set</skos:prefLabel>    
+  </skos:Concept> 
+  
+</rdf:RDF>
+

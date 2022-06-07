@@ -3555,4 +3555,132 @@
     <label>Link</label>
     <description>Link type</description>
   </element>
+
+
+  <!-- ================================================== -->
+  <!-- ZAMG LABELS (porting from 2.10) -->
+  <!-- ================================================== -->
+
+  <!-- ================================================== -->
+  <!-- Help for main groups in SIMPLE view -->
+  <!-- ================================================== -->
+
+  <element name="zamgtabdata">
+    <label>Data information</label>
+    <description>Basic information about the dataset.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabvar">
+    <label>Variable info</label>
+    <description>Information about the dataset variable.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabext">
+    <label>Extent</label>
+    <description>Temporal and geographic extents of the dataset.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabres">
+    <label>Resolution</label>
+    <description>Spatial and temporal resolutions of the data.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabcrs">
+    <label>Coordinate reference system</label>
+    <description>The CRS of the dataset.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabstorage">
+    <label>Data storage</label>
+    <description>Information about the formats the data is distributed, and its file size.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabsrcinfo">
+    <label>Source information</label>
+    <description>Information about the data source and processing.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabauthor">
+    <label>Data author</label>
+    <description>Contact information about the expert who gathered or processed the dataset.</description>
+    <help>This information will not be visibile outside ZAMG.</help>
+  </element>
+
+  <element name="zamgtabdistributor">
+    <label>Data distributor</label>
+    <description>Contact information about the ZAMG department which can distribute the data to external users.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <!-- ================================================== -->
+  <!-- -->
+  <!-- ================================================== -->
+  <element name="zamgRegions">
+    <label>Region</label>
+    <description>Region to which data applies.</description>
+    <help>Metadata record will contain the related ISO3166-2:AT code.</help>
+  </element>
+
+  <element name="zamg_short_north">
+    <label>N:</label>
+  </element>
+  <element name="zamg_short_south">
+    <label>S:</label>
+  </element>
+  <element name="zamg_short_east">
+    <label>E:</label>
+  </element>
+  <element name="zamg_short_west">
+    <label>W:</label>
+  </element>
+  <element name="zamg_custom">
+    <label>Custom</label>
+  </element>
+
+
+  <!-- ================================================== -->
+  <!-- Help for fixed dropdowns -->
+  <!-- ================================================== -->
+
+  <element name="zamg-variable">
+    <label>Variable name</label>
+    <description>The main variable name for the dataset.</description>
+    <help>Set the main variable name as a keyword from a fixed thesaurus.</help>
+  </element>
+
+  <element name="zamg-uom">
+    <label>Unity of Measure</label>
+    <description>The UoM for the main variable in the dataset.</description>
+    <help>Set the uom as a keyword from a fixed thesaurus.</help>
+  </element>
+
+  <element name="zamg-sourcetype">
+    <label>Source type</label>
+    <description>The source type for the data in the dataset.</description>
+    <help>Set the source type as a keyword from a fixed thesaurus.</help>
+  </element>
+
+  <element name="zamg-datatype">
+    <label>Data type</label>
+    <description>The data type for the data in the dataset.</description>
+    <help>Set the data type as a keyword from a fixed thesaurus.</help>
+  </element>
+
+  <element name="zamg-restriction">
+    <label>Restriction</label>
+    <description>Tells if this metadata is for internal use only.</description>
+    <help>Set to public if this (meta)data could be exported outside ZAMG.</help>
+  </element>
+
+  <!-- ================================================== -->
+  <!-- ^^^ END OF ZAMG STUFF ^^^ -->
+  <!-- ================================================== -->
+
 </labels>

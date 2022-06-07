@@ -556,5 +556,11 @@
     "statusWorkflow-5": "Rejected",
     "statusWorkflow-21": "Approved with working copy",
     "statusWorkflow-24": "Approved with working copy submitted",
-    "mdStatusWorkflow": "Workflow progress"
+    "mdStatusWorkflow": "Workflow progress",
+
+    "facets_zamg_variable": "ZAMG - Variable name",
+    "facets_zamg_uom": "ZAMG - Unit of Measure",
+    "facets_zamg_sourcetype": "ZAMG - Source type",
+    "facets_zamg_datatype": "ZAMG - Data type",
+    "facets_zamg_mdtarget": "ZAMG - Target"
 }

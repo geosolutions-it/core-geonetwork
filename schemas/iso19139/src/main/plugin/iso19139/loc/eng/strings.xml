@@ -241,4 +241,84 @@
   <east>east</east>
   <south>south</south>
   <west>west</west>
+
+  <!-- ================================================== -->
+  <!-- ZAMG STRINGS (porting from 2.10) -->
+  <!-- ================================================== -->
+
+  <rules name="schematron-rules-zamg">ZAMG format recommendations</rules>
+
+  <zamg2iso19139>Export this metadata as an ISO19139 XML file</zamg2iso19139>
+  <zamg2iso19139gml32>Export this metadata as an ISO19139 XML file (with namespace gml/3.2)</zamg2iso19139gml32>
+  <zamg2dc>Export this metadata as an AOI Dublin Core XML file</zamg2dc>
+
+  <zamg_tab_zamg>ZAMG</zamg_tab_zamg>
+  <zamg_tab_simple1>Simple view</zamg_tab_simple1>
+  <zamg_tab_simple2>Extended view</zamg_tab_simple2>
+
+  <zamg_title_simple1>Simplified view</zamg_title_simple1>
+  <zamg_title_simple2>Extended view</zamg_title_simple2>
+
+  <zamgtabdata>Data Information</zamgtabdata>
+  <zamgtabvar>Variable info</zamgtabvar>
+  <zamgtabext>Extent</zamgtabext>
+  <zamgtabres>Resolution</zamgtabres>
+  <zamgtabcrs>CRS</zamgtabcrs>
+  <zamgtabstorage>Data storage</zamgtabstorage>
+  <zamgtabsrcinfo>Source information</zamgtabsrcinfo>
+  <zamgtabauthor>Data author</zamgtabauthor>
+  <zamgtabdistributor>Data distributor</zamgtabdistributor>
+
+  <zamgtabstoragebox>Format</zamgtabstoragebox>
+
+  <zamgRegions.label>Region</zamgRegions.label>
+
+  <!-- <zamgRegions> <option value="none">No area</option> <option value="AT">Österreich</option> <option value="AT-1">Burgenland</option> <option value="AT-2">Kärnten</option> <option value="AT-3">Niederösterreich</option> <option value="AT-4">Oberösterreich</option> <option value="AT-5">Salzburg</option> <option value="AT-6">Steiermark</option> <option value="AT-7">Tirol</option> <option value="AT-8">Vorarlberg</option> 
+    <option value="AT-9">Wien</option> </zamgRegions> -->
+
+  <zamgCrs.label>CRS</zamgCrs.label>
+  <zamgTimeResolution.label>Time resolution</zamgTimeResolution.label>
+
+  <zamgThesaurus>
+    <label name="geonetwork.thesaurus.external.theme.zamg-variable">XXVariable name</label>
+    <label name="geonetwork.thesaurus.external.theme.zamg-uom">XXUoM</label>
+    <label name="geonetwork.thesaurus.external.theme.zamg-sourcetype">XXSource type</label>
+    <label name="geonetwork.thesaurus.external.theme.zamg-datatype">XXData type</label>
+  </zamgThesaurus>
+
+  <zamg_variable>XXXVariable name</zamg_variable>
+  <zamg_uom>XXXUoM</zamg_uom>
+  <zamg_sourcetype>XXXSource type</zamg_sourcetype>
+  <zamg_datatype>XXXData type</zamg_datatype>
+
+  <datatype_none>XXXNot set</datatype_none>
+  <datatype_gridded>XXXGridded</datatype_gridded>
+  <datatype_station>XXXStation data</datatype_station>
+
+  <sourcetype_observation>XXXObservation</sourcetype_observation>
+  <sourcetype_model>XXXModel</sourcetype_model>
+
+  <zamg_restriction>
+    <title>Access</title>
+    <license>Public</license>
+    <restricted>For internal use only</restricted>
+  </zamg_restriction>
+
+  <zamg_short_north>XN:</zamg_short_north>
+  <zamg_short_south>XS:</zamg_short_south>
+  <zamg_short_east>XE:</zamg_short_east>
+  <zamg_short_west>XW:</zamg_short_west>
+  <zamg_custom>Custom</zamg_custom>
+  
+  <add-dataformat>add a data storage format</add-dataformat>
+
+  <!-- add buttons -->  
+  <zamg_btn_add_variable>Add variable</zamg_btn_add_variable>
+  <zamg_btn_add_limitation>Add use limitation</zamg_btn_add_limitation>
+  <zamg_btn_add_voicenumber>Add voice number</zamg_btn_add_voicenumber>
+  <zamg_btn_add_email>Add email address</zamg_btn_add_email>
+  
+  <!-- ================================================== -->
+  <!-- ^^^ END OF ZAMG STUFF ^^^ -->
+  <!-- ================================================== -->
 </strings>

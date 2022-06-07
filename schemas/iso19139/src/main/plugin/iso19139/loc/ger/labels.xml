@@ -3799,4 +3799,131 @@
     <label>Link</label>
     <description>Link type</description>
   </element>
+
+  <!-- ================================================== -->
+  <!-- ZAMG LABELS (porting from 2.10) -->
+  <!-- ================================================== -->
+
+  <!-- ================================================== -->
+  <!-- Help for main groups in SIMPLE view -->
+  <!-- ================================================== -->
+
+  <element name="zamgtabdata">
+    <label>Datensatz Information</label>
+    <description>Basisinformation über den Datensatz.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabvar">
+    <label>Parameter Information</label>
+    <description>Informationen über im Datensatz enthaltene Parameter.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabext">
+    <label>Ausdehnung</label>
+    <description>Zeitliche und geographische Ausdehnung des Datensatzes.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabres">
+    <label>Auflösung</label>
+    <description>Räumliche und zeitliche Auflösung des Datensatzes.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabcrs">
+    <label>Koordinaten Referenz System</label>
+    <description>Informationen zum Koordinaten Referenz System bzw. geographische Projektion des Datensatzes.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabstorage">
+    <label>Daten Speicherung</label>
+    <description>Informationen über verfügbare Datei-Formate und deren Datei-Größe.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabsrcinfo">
+    <label>Quelle</label>
+    <description>Informationen über die Daten-Quelle und die Datenverarbeitung.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <element name="zamgtabauthor">
+    <label>Datensatz Author</label>
+    <description>Kontakt Information über den Ersteller des Datensatzes.</description>
+    <help>Diese Information ist ausserhalb der ZAMG nicht sichtbar.</help>
+  </element>
+
+  <element name="zamgtabdistributor">
+    <label>Datensatz Vertreiber</label>
+    <description>Kontakt Information über die für den Datensatz zuständige Organisationseinheit der ZAMG.</description>
+    <!--<help>Metadata record will containg the related ISO3166-2:AT code.</help> -->
+  </element>
+
+  <!-- ================================================== -->
+  <!-- -->
+  <!-- ================================================== -->
+
+  <element name="zamgRegions">
+    <label>Region</label>
+    <description>Region die durch den Datensatz abgedeckt wird.</description>
+    <help>Metadatensatz enthält den entsprechenden ISO3166-2:AT Code.</help>
+  </element>
+
+  <element name="zamg_short_north">
+    <label>N:</label>
+  </element>
+  <element name="zamg_short_south">
+    <label>S:</label>
+  </element>
+  <element name="zamg_short_east">
+    <label>O:</label>
+  </element>
+  <element name="zamg_short_west">
+    <label>W:</label>
+  </element>
+  <element name="zamg_custom">
+    <label>Manuell</label>
+  </element>
+
+
+  <!-- ================================================== -->
+  <!-- Help for fixed dropdowns -->
+  <!-- ================================================== -->
+
+  <element name="zamg-variable">
+    <label>Parameter Name</label>
+    <description>Ein im Datensatz enthaltener Parameter.</description>
+    <help>Wählen Sie einen Parameter Namen im Auswahlmenü.</help>
+  </element>
+
+  <element name="zamg-uom">
+    <label>Maßeinheit</label>
+    <description>Die Maßeinheit des Parameters.</description>
+    <help>Wählen Sie die Maßeinheit aus dem Auswahlmenü. Bei Datensätzen mit mehreren Parametern bitte "keine Information" auswählen.</help>
+  </element>
+
+  <element name="zamg-sourcetype">
+    <label>Quelltyp</label>
+    <description>Basiert der Datensatz auf Messungen oder Modellierung.</description>
+    <help>Wählen Sie den Quelltyp aus dem Auswahlmenü.</help>
+  </element>
+
+  <element name="zamg-datatype">
+    <label>Datentyp</label>
+    <description>Ist der Datensatz bezogen auf ein Gitter oder Stationsdaten.</description>
+    <help>Wählen Sie den Datentyp aus dem Auswahlmenü. "keine Information" ist zulässig.</help>
+  </element>
+
+  <element name="zamg-restriction">
+    <label>Zugriffsbeschränkung</label>
+    <description>Legt fest ob dieser Metadatensatz nur ZAMG intern verfügbar ist.</description>
+    <help>Auf extern setzen wenn der Metadatensatz im externen ZAMG Metadatenkatalog aufscheinen soll.</help>
+  </element>
+
+  <!-- ================================================== -->
+  <!-- ^^^ END OF ZAMG STUFF ^^^ -->
+  <!-- ================================================== -->
 </labels>

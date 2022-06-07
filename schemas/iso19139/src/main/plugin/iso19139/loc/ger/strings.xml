@@ -225,4 +225,93 @@
   <trueValue>Ja</trueValue>
   <falseValue>Nein</falseValue>
   <nilValue>Undefined</nilValue>
+
+  <!-- ================================================== -->
+  <!-- ZAMG STRINGS (porting from 2.10) -->
+  <!-- ================================================== -->
+
+  <rules name="schematron-rules-zamg">ZAMG Format Empfehlungen</rules>
+
+  <zamg2iso19139>Als ISO19139 XML Datei exportieren</zamg2iso19139>
+  <zamg2iso19139gml32>Als ISO19139 XML Datei (mit Namespace gml/3.2) exportieren</zamg2iso19139gml32>
+  <zamg2dc>Als AOI Dublin Core XML Datei exportieren</zamg2dc>
+
+  <zamg_tab_zamg>ZAMG</zamg_tab_zamg>
+  <zamg_tab_simple1>Basis-Ansicht</zamg_tab_simple1>
+  <zamg_tab_simple2>Erweiterte-Ansicht</zamg_tab_simple2>
+
+  <zamg_title_simple1>Basis-Ansicht</zamg_title_simple1>
+  <zamg_title_simple2>Erweiterte-Ansicht</zamg_title_simple2>
+
+  <zamgtabdata>Datensatz Information</zamgtabdata>
+  <zamgtabvar>Parameter Information</zamgtabvar>
+  <zamgtabext>Ausdehnung</zamgtabext>
+  <zamgtabres>Auflösung</zamgtabres>
+  <zamgtabcrs>Koordinaten Referenz System (CRS)</zamgtabcrs>
+  <zamgtabstorage>Daten Speicherung</zamgtabstorage>
+  <zamgtabsrcinfo>Datensatz Entstehungsinformation</zamgtabsrcinfo>
+  <zamgtabauthor>Datensatz Author</zamgtabauthor>
+  <zamgtabdistributor>Datensatz Vertreiber</zamgtabdistributor>
+
+  <zamgtabstoragebox>Format</zamgtabstoragebox>
+
+  <zamgRegions.label>Region</zamgRegions.label>
+
+  <zamgCrs.label>CRS</zamgCrs.label>
+  <zamgTimeResolution.label>Zeitliche Auflösung</zamgTimeResolution.label>
+
+  <zamgThesaurus>
+    <label name="geonetwork.thesaurus.external.theme.zamg-variable">Paramter Name</label>
+    <label name="geonetwork.thesaurus.external.theme.zamg-uom">Maßeinheit</label>
+    <label name="geonetwork.thesaurus.external.theme.zamg-sourcetype">Quelltyp</label>
+    <label name="geonetwork.thesaurus.external.theme.zamg-datatype">Datentyp</label>
+  </zamgThesaurus>
+
+  <zamg_variable>XXXParameter Name</zamg_variable>
+  <zamg_uom>XXXMaßeinheit</zamg_uom>
+  <zamg_sourcetype>XXXQuelltyp</zamg_sourcetype>
+  <zamg_datatype>XXXDatentyp</zamg_datatype>
+
+  <datatype_none>XXXkeine Information</datatype_none>
+  <datatype_gridded>XXXGitter</datatype_gridded>
+  <datatype_station>XXXStation</datatype_station>
+
+  <sourcetype_observation>XXXMessung</sourcetype_observation>
+  <sourcetype_model>XXXModell</sourcetype_model>
+
+  <zamg_restriction>
+    <title>Zugriffsbeschränkung</title>
+    <license>öffentlich</license>
+    <restricted>nur intern</restricted>
+  </zamg_restriction>
+
+  <zamg_short_north>XN:</zamg_short_north>
+  <zamg_short_south>XS:</zamg_short_south>
+  <zamg_short_east>XO:</zamg_short_east>
+  <zamg_short_west>XW:</zamg_short_west>
+  <zamg_custom>Manuell</zamg_custom>
+
+  <understandResource>Informationen über den Datensatz</understandResource>
+  <relatedResources>verwandte Dienste und verbundene Daten</relatedResources>
+  <techInfo>Technische Information</techInfo>
+  <contactInfo>Kontakt Information</contactInfo>
+  <mdContactInfo>Metadaten Kontakt</mdContactInfo>
+  <refDate>Referenz Datum</refDate>
+  <temporalRef>Zeitliche Information</temporalRef>
+  <constraintInfo>Zugriffsbeschränkung</constraintInfo>
+  <xml_iso19139>Diesen Metadatensatz als ISO19139 XML Datei speichern</xml_iso19139>
+  <xml_iso19139Tooai_dc>Diesen Metadatensatz als OAI Dublin Core XML Datei speichern</xml_iso19139Tooai_dc>
+
+  <!-- add buttons -->
+  <add-dataformat>add a data storage format</add-dataformat>
+
+  <zamg_btn_add_variable>Add Paramter</zamg_btn_add_variable>
+  <zamg_btn_add_limitation>Add use limitation</zamg_btn_add_limitation>
+  <zamg_btn_add_voicenumber>Add voice number</zamg_btn_add_voicenumber>
+  <zamg_btn_add_email>Add email address</zamg_btn_add_email>
+
+  <!-- ================================================== -->
+  <!-- ^^^ END OF ZAMG STUFF ^^^ -->
+  <!-- ================================================== -->
+
 </strings>

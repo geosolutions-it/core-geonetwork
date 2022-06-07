@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:dc="http://purl.org/dc/elements/1.1/" 
+         xmlns:dcterms="http://purl.org/dc/terms/" 
+         xmlns:fn="http://www.w3.org/2005/02/xpath-functions" 
+         xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+         xmlns:gml="http://www.opengis.net/gml#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+         xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" 
+         xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Scheme -->
+  <skos:ConceptScheme rdf:about="http://geonetwork-opensource.org/zamg/variable">
+    <dc:title>ZAMG - Variable names</dc:title>
+    <dc:description>Variable names used in ZAMG datasets</dc:description>
+    <dc:creator>
+      <foaf:Organization>
+        <foaf:name>ZAMG</foaf:name>
+      </foaf:Organization>
+    </dc:creator>
+    <dc:rights>Free to all for non commercial use.</dc:rights>
+    <dcterms:issued>2014-11-11 00:00:00</dcterms:issued>
+    <dcterms:modified>2014-11-11 00:00:00</dcterms:modified>
+  </skos:ConceptScheme>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#temperature">
+    <skos:altLabel>temperature</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Temperatur</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Temperature</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#wind">
+    <skos:altLabel>wind</skos:altLabel>    
+    <skos:prefLabel xml:lang="de">Wind</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Wind</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#precipitation">
+    <skos:altLabel>precipitation</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Niederschlag</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Precipitation</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#snow">
+    <skos:altLabel>snow</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Schnee</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Snow</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#air_pressure">
+    <skos:altLabel>air_pressure</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Luftdruck</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Air Pressure</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#cloudiness">
+    <skos:altLabel>cloudiness</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Bewölkung</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Cloudiness</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#weather_phenomenon">
+    <skos:altLabel>weather_phenomenon</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Wettererscheinung</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Weather Phenomenon</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#radiation">
+    <skos:altLabel>radiation</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Strahlung</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Radiation</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#humidity">
+    <skos:altLabel>humidity</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Feuchte</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Humidity</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#gas_and_particle_concentration">
+    <skos:altLabel>gas_and_particle_concentration</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gas- und Partikel-Konzentration</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Gas- and Particle-Concentration</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#seismics">
+    <skos:altLabel>seismics</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Seismik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Seismics</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/variable#magnetics">
+    <skos:altLabel>magnetics</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Magnetik</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Magnetics</skos:prefLabel>
+  </skos:Concept>
+
+</rdf:RDF>
+

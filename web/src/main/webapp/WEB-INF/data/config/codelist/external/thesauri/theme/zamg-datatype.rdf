@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gml="http://www.opengis.net/gml#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Scheme -->
+  <skos:ConceptScheme rdf:about="http://geonetwork-opensource.org/zamg/datatype">
+    <dc:title>ZAMG - Type of data</dc:title>
+    <dc:description>Type of data used in ZAMG datasets</dc:description>
+    <dc:creator>
+      <foaf:Organization>
+        <foaf:name>ZAMG</foaf:name>
+      </foaf:Organization>
+    </dc:creator>
+    <dc:rights>Free to all for non commercial use.</dc:rights>
+    <dcterms:issued>2014-11-11 00:00:00</dcterms:issued>
+    <dcterms:modified>2015-02-18 16:00:00</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/datatype#gridded">
+    <skos:altLabel>gridded</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gitter</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Gridded</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/sourcetype#station">
+    <skos:altLabel>station</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Station</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Station</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- No datatype set or known -->
+  <skos:Concept rdf:about="http://geonetwork-opensource.org/zamg/datatype#none">
+    <skos:altLabel>none</skos:altLabel>
+    
+    <skos:prefLabel xml:lang="de">keine Information</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Not set</skos:prefLabel>    
+  </skos:Concept>
+  
+</rdf:RDF>
+
