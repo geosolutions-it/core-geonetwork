@@ -63,6 +63,8 @@ public class CswParams extends AbstractParams {
     public String xslfilter;
     public List<Element> eltSearches = new ArrayList<Element>();
 
+    public boolean applyXslBeforeSchemaDetection;
+
     @Override
     public String getIcon() {
         return icon;
@@ -91,7 +93,7 @@ public class CswParams extends AbstractParams {
         outputSchema = Util.getParam(site, "outputSchema", outputSchema);
         sortBy = Util.getParam(site, "sortBy", sortBy);
         icon = Util.getParam(site, "icon", "default.gif");
-
+        applyXslBeforeSchemaDetection = Util.getParam(site, "applyXslBeforeSchemaDetection", false);
         if (searches != null) {
             if (searches.getChild("search") != null) {
                 @SuppressWarnings("unchecked")
@@ -120,6 +122,7 @@ public class CswParams extends AbstractParams {
         hopCount = Util.getParam(site, "hopCount", hopCount);
         xpathFilter = Util.getParam(site, "xpathFilter", "");
         xslfilter = Util.getParam(site, "xslfilter", "");
+        applyXslBeforeSchemaDetection =Util.getParam(site, "applyXslBeforeSchemaDetection", false);
         outputSchema = Util.getParam(site, "outputSchema", outputSchema);
         sortBy = Util.getParam(site, "sortBy", "");
 
@@ -157,7 +160,7 @@ public class CswParams extends AbstractParams {
         copy.sortBy = sortBy;
 
         copy.eltSearches = eltSearches;
-
+        copy.applyXslBeforeSchemaDetection = applyXslBeforeSchemaDetection;
         return copy;
     }
 

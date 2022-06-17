@@ -22,6 +22,9 @@
     <xslfilter>
       <xsl:value-of select="xslfilter/value"/>
     </xslfilter>
+    <applyXslBeforeSchemaDetection>
+      <xsl:value-of select="applyXslBeforeSchemaDetection/value"/>
+    </applyXslBeforeSchemaDetection>
     <queryScope>
       <xsl:value-of select="queryScope/value"/>
     </queryScope>
