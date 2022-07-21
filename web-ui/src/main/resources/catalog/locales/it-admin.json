@@ -1,4 +1,5 @@
 {
+    "rndt-fix-thesaurus-eionet": "RNDT: correggi il namespace del thesaurus INSPIRE a eionet",
     "NEW": "Nuovo",
     "abstract": "Descrizione",
     "accessConstraints": "Vincoli di accesso",
@@ -57,7 +58,6 @@
     "batchreplacer-addReplacement": "Aggiungi sostituzione",
     "massive-search-and-replace": "Cerca e sostituisci",
     "batchreplacer-vacuum-mode": "Modalità vacuum",
-    "fix-rndt2": "Correggi metadati RNDT v2",
     "schemaVersion": "Schema version:",
     "appMinorVersionSupported": "Application minor version supported:",
     "appMajorVersionSupported": "Application major version supported:",

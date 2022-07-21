@@ -133,6 +133,9 @@
     <facet name="maintenanceAndUpdateFrequency" indexKey="cl_maintenanceAndUpdateFrequency"
            label="maintenanceAndUpdateFrequencies"/>
     <facet name="mdActions" indexKey="_mdActions" label="mdActions"/>
+
+    <facet name="pubblicaAmministrazione" indexKey="pa" label="pubblicaAmministrazione"/>
+    <facet name="iPA" indexKey="ipa" label="iPA"/>
   </facets>
 
   <summaryTypes>
@@ -140,8 +143,10 @@
       <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
       <item facet="mdActions"/>
       <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="20"/>
+      <!--<item facet="inspireThemeURI" sortBy="value" sortOrder="asc" max="35"
+            translator="term:http://inspire.ec.europa.eu/theme"/> -->
       <item facet="inspireThemeURI" sortBy="value" sortOrder="asc" max="35"
-            translator="term:http://inspire.ec.europa.eu/theme"/>
+            translator="term:http://www.eionet.europa.eu/gemet/inspire_themes"/>
       <!--<item facet="inspireTheme" sortBy="value" sortOrder="asc" max="35"/>-->
       <!--<item facet="inspireThemeWithAc" sortBy="value" sortOrder="asc" max="35"/>-->
       <item facet="keyword" max="15"/>
@@ -158,6 +163,9 @@
       <item facet="serviceType"/>
       <item facet="denominator" sortBy="numValue" sortOrder="desc"/>
       <item facet="resolution" sortBy="numValue" sortOrder="desc"/>
+
+      <item facet="pubblicaAmministrazione"/>
+
       <!--
       <item facet="region"
             translator="term:http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox"/>
@@ -185,6 +193,8 @@
       <item facet="isHarvested" max="2" sortBy="value" translator="apploc:"/>
       <item facet="metadataType" max="3" sortBy="value" translator="apploc:recordType-"/>
 	    <item facet="isPublishedToAll" max="2" sortBy="value" translator="apploc:"/>
+
+      <item facet="pubblicaAmministrazione" max="50"/>
     </summaryType>
 
     <!-- (deprecated) old-style configuration supporting only
@@ -195,8 +205,10 @@
       <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="20"/>
       <item facet="inspireTheme" sortBy="value" sortOrder="asc" max="35"/>
       <item facet="inspireThemeWithAc" sortBy="value" sortOrder="asc" max="35"/>
+<!--      <item facet="inspireThemeURI" sortBy="value" sortOrder="asc" max="35"
+            translator="term:http://inspire.ec.europa.eu/theme"/> -->
       <item facet="inspireThemeURI" sortBy="value" sortOrder="asc" max="35"
-            translator="term:http://inspire.ec.europa.eu/theme"/>
+            translator="term:http://www.eionet.europa.eu/gemet/inspire_themes"/>
       <item facet="keyword" max="15"/>
       <item facet="orgName" max="25"/>
       <item facet="createDateYear" sortBy="value" sortOrder="desc" max="40"/>
@@ -209,6 +221,8 @@
       <item facet="serviceType"/>
       <item facet="denominator" sortBy="numValue" sortOrder="desc"/>
       <item facet="resolution" sortBy="numValue" sortOrder="desc"/>
+
+      <item facet="pubblicaAmministrazione"/>
       <!--<item facet="metadataPOC" max="15"/>-->
     </summaryType>
     <summaryType name="subtemplates">

@@ -1,4 +1,10 @@
-{"config": [{
+{"config": [
+  {
+    "key": "rndt-fix-thesaurus-eionet",
+    "type": "fixed-params",
+    "params": []
+  },        
+  {
     "key": "url-host-relocator",
     "type": "fixed-params",
     "params": [
