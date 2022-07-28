@@ -807,6 +807,10 @@
                   <xsl:value-of select="$applicationProfileFound" />
                </gmx:Anchor>
             </gmd:applicationProfile>
+
+            <!-- Name (not used by RNDT, not prohibited either) -->         
+            <xsl:apply-templates select="gmd:name"/>
+
             <!-- Description -->
             <gmd:description>
                <gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint">accessPoint</gmx:Anchor>
