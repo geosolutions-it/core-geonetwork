@@ -350,9 +350,10 @@
         '$http',
         '$filter',
         '$log',
+        '$q',
         function(gnOnlinesrc, gnOwsCapabilities, gnWfsService, gnSchemaManagerService,
             gnEditor, gnCurrentEdit, gnMap, gnMapsManager, gnUrlUtils, gnGlobalSettings, Metadata,
-            $rootScope, $translate, $timeout, $http, $filter, $log) {
+            $rootScope, $translate, $timeout, $http, $filter, $log, $q) {
           return {
             restrict: 'A',
             templateUrl: '../../catalog/components/edit/onlinesrc/' +
@@ -510,7 +511,7 @@
                 var initThumbnailMaker = function() {
 
                   if (!scope.loaded) {
-                    scope.map = gnMapsManager.createMap(gnMapsManager.VIEWER_MAP);
+                    scope.map = gnMapsManager.createMap(gnMapsManager.GENERATE_THUMBNAIL_MAP);
 
                     // scope.map = new ol.Map({
                     //   layers: [],
