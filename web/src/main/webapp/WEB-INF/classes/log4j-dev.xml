@@ -171,6 +171,23 @@
     <level value="ERROR"/>
   </logger>
 
+  <!-- remove DEBUG from very verbose beans -->
+  <logger name="org.springframework.jdbc.datasource.DataSourceUtils" additivity="false">
+    <level value="INFO"/>
+  </logger>
+  <logger name="org.springframework.orm.jpa.JpaTransactionManager" additivity="false">
+    <level value="INFO"/>
+  </logger>
+  <logger name="org.springframework.orm.jpa.EntityManagerFactoryUtils" additivity="false">
+    <level value="INFO"/>
+  </logger>
+  <logger name="org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler" additivity="false">
+    <level value="INFO"/>
+  </logger>
+  <logger name="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" additivity="false">
+    <level value="INFO"/>
+  </logger>
+
   <!--  JZKIT logging configuration -->
   <logger name="com.k_int" additivity="false">
     <level value="WARN"/>
