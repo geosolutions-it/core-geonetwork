@@ -91,8 +91,9 @@
     '$rootScope',
     '$location',
     'gnSearchLocation',
+    'gnLangs',
     function($q, gnMap, gnOwsContextService, gnViewerSettings, $rootScope,
-             $location, gnSearchLocation) {
+             $location, gnSearchLocation, gnLangs) {
 
       var mapParams = {};
       if (gnSearchLocation.isMap()) {
@@ -108,6 +109,7 @@
         VIEWER_MAP: 'viewer',
         SEARCH_MAP: 'search',
         EDITOR_MAP: 'editor',
+        GENERATE_THUMBNAIL_MAP: 'thumbnail',
 
         /**
          * @ngdoc method
@@ -209,6 +211,7 @@
                 var params = $location.search();
                 var newContext = params.owscontext || params.map;
                 if (newContext && newContext !== urlContext) {
+                  newContext = newContext.replace('{lang}', gnLangs.current);
                   urlContext = newContext;
                   gnOwsContextService.loadContextFromUrl(
                       urlContext, map);
@@ -234,11 +237,12 @@
               }
             }
           }
-          if (!mapReady) {
-            if (config.context) {
+
+          if (!mapReady && config.context) {
+              var contextFile = config.context.replace('{lang}', gnLangs.current);
+
               mapReady = gnOwsContextService.loadContextFromUrl(
-                  config.context, map);
-            }
+                contextFile, map);
           }
           var creationPromise = $q.when(mapReady).then(function() {
 
