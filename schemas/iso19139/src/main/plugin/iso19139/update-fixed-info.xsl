@@ -57,19 +57,22 @@
   * ISO19139:2005 (not recommended)
   <xsl:variable name="isUsing2005Schema" select="true()"/>
   -->
-  <xsl:variable name="isUsing2005Schema"
+  <xsl:variable name="isUsing2005Schema" select="false()"/>
+  <xsl:variable name="isUsing2007Schema" select="true()"/>  
+  
+<!--   <xsl:variable name="isUsing2005Schema"
                 select="(/root/gmd:MD_Metadata/@xsi:schemaLocation
                           and /root/gmd:MD_Metadata/@xsi:schemaLocation != $schemaLocationFor2007)
                         or
                         count(//gml320:*) > 0"/>
-
+ -->
   <!-- This variable is used to migrate from 2005 to 2007 version.
   By setting the schema location in a record, on next save, the record
   will use GML3.2.1.-->
-  <xsl:variable name="isUsing2007Schema"
+<!--   <xsl:variable name="isUsing2007Schema"
                 select="/root/gmd:MD_Metadata/@xsi:schemaLocation
                           and /root/gmd:MD_Metadata/@xsi:schemaLocation = $schemaLocationFor2007"/>
-
+ -->
   <!-- We use the category check to find out if this is an SDS metadata. Please replace with anything better -->
   <xsl:variable name="isSDS"
                 select="count(//gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gmx:Anchor[starts-with(@xlink:href, 'http://inspire.ec.europa.eu/metadata-codelist/Category')]) = 1"/>

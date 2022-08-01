@@ -3166,6 +3166,279 @@
 
     </view>
 
+    <view name="zamg_tab_zamg">
+      <sidePanel>
+        <directive data-gn-validation-report=""/>
+        <directive data-gn-onlinesrc-list=""/>
+      </sidePanel>
+
+      <tab id="zamg_tab_simple1" default="true" mode="flat">
+          <section name="zamgtabdata">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints" />
+          </section>
+
+          <section name="zamgtabvar">
+
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-uom']" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-sourcetype']" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-datatype']" />
+
+            <field del="../." xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-variable']" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_variable"
+                      name="keyword" or="keyword"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords">
+                      <template>
+                        <snippet>
+                          <gmd:keyword>
+                            <gco:CharacterString>temperature</gco:CharacterString>
+                         </gmd:keyword>
+                        </snippet>
+                      </template>
+            </action>
+
+          </section>
+          <section name="zamgtabext">
+            <field xpath="/gmd:MD_Metadata//gmd:geographicElement/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:RS_Identifier" />
+            <!--<field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString/text()='Austrian Regions']" />-->
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement" />
+          </section>
+          <section name="zamgtabcrs">
+            <field xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code" />
+          </section>
+          <section name="zamgtabres">
+            <field xpath="/gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_Georeferenceable/gmd:axisDimensionProperties/gmd:MD_Dimension/gmd:resolution" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:distance" />
+          </section>
+          <section name="zamgtabstorage">
+            <field xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution" />
+            <action type="process"
+                      process="add-dataformat"
+                      forceLabel="true" />
+          </section>
+          <section name="zamgtabsrcinfo">
+            <field xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement" />
+            <field xpath="/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_Constraints/gmd:useLimitation" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_limitation"
+                      name="useLimitation" or="useLimitation"
+                      in="/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_Constraints">
+                      <template>
+                        <snippet>
+                          <gmd:useLimitation>
+                            <gco:CharacterString></gco:CharacterString>
+                          </gmd:useLimitation>
+                        </snippet>
+                      </template>
+            </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation" />
+          </section>
+          <section name="zamgtabauthor">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:individualName" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_voicenumber"
+                      name="voice" or="voice"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone">
+                      <template>
+                        <snippet>
+                          <gmd:voice>
+                            <gco:CharacterString></gco:CharacterString>
+                          </gmd:voice>
+                        </snippet>
+                      </template>
+             </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_email"
+                      name="electronicMailAddress" or="electronicMailAddress"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address">
+                      <template>
+                        <snippet>
+                          <gmd:electronicMailAddress>
+                            <gco:CharacterString>@zamg.ac.at</gco:CharacterString>
+                          </gmd:electronicMailAddress>
+                        </snippet>
+                      </template>
+            </action>
+          </section>
+          <section name="zamgtabdistributor">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:individualName" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_voicenumber"
+                      name="voice" or="voice"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone">
+                      <template>
+                        <snippet>
+                          <gmd:voice>
+                            <gco:CharacterString></gco:CharacterString>
+                          </gmd:voice>
+                        </snippet>
+                      </template>
+             </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_email"
+                      name="electronicMailAddress" or="electronicMailAddress"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address">
+                      <template>
+                        <snippet>
+                          <gmd:electronicMailAddress>
+                            <gco:CharacterString>@zamg.ac.at</gco:CharacterString>
+                          </gmd:electronicMailAddress>
+                        </snippet>
+                      </template>
+            </action>
+          </section>
+      </tab>
+
+      <tab id="zamg_tab_simple2" mode="flat">
+          <section name="zamgtabdata">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode" />
+            <section name="conformity_date">
+              <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date" />
+            </section>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints" />
+          </section>
+          <section name="zamgtabvar">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-uom']" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-sourcetype']" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-datatype']" />
+
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-variable']" />
+            <action type="add"
+                btnLabel="zamg_btn_add_variable"
+                name="keyword" or="keyword"
+                in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords">
+                <template>
+                  <snippet>
+                    <gmd:keyword>
+                      <gco:CharacterString>temperature</gco:CharacterString>
+                   </gmd:keyword>
+                  </snippet>
+                </template>
+            </action>
+
+          </section>
+          <section name="zamgtabext">
+            <field xpath="/gmd:MD_Metadata//gmd:geographicElement/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:RS_Identifier" />
+            <!--<field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString/text()='Austrian Regions']" />-->
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement" />
+          </section>
+          <section name="zamgtabcrs">
+            <field xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code" />
+          </section>
+          <section name="zamgtabres">
+            <field xpath="/gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_Georeferenceable/gmd:axisDimensionProperties/gmd:MD_Dimension/gmd:resolution" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:distance" />
+          </section>
+          <section name="zamgtabstorage">
+            <field xpath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution" />
+            <action type="process"
+                      process="add-dataformat"
+                      forceLabel="true" />
+          </section>
+          <section name="zamgtabsrcinfo">
+            <field xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement" />
+            <field xpath="/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_Constraints/gmd:useLimitation" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_limitation"
+                      name="useLimitation" or="useLimitation"
+                      in="/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_Constraints">
+                      <template>
+                        <snippet>
+                          <gmd:useLimitation>
+                            <gco:CharacterString></gco:CharacterString>
+                          </gmd:useLimitation>
+                        </snippet>
+                      </template>
+            </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation" />
+          </section>
+          <section name="zamgtabauthor">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:individualName" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_voicenumber"
+                      name="voice" or="voice"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone">
+                      <template>
+                        <snippet>
+                          <gmd:voice>
+                            <gco:CharacterString></gco:CharacterString>
+                          </gmd:voice>
+                        </snippet>
+                      </template>
+             </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_email"
+                      name="electronicMailAddress" or="electronicMailAddress"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address">
+                      <template>
+                        <snippet>
+                          <gmd:electronicMailAddress>
+                            <gco:CharacterString>@zamg.ac.at</gco:CharacterString>
+                          </gmd:electronicMailAddress>
+                        </snippet>
+                      </template>
+            </action>
+          </section>
+          <section name="zamgtabdistributor">
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:individualName" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_voicenumber"
+                      name="voice" or="voice"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone">
+                      <template>
+                        <snippet>
+                          <gmd:voice>
+                            <gco:CharacterString></gco:CharacterString>
+                          </gmd:voice>
+                        </snippet>
+                      </template>
+             </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" />
+            <action type="add"
+                      btnLabel="zamg_btn_add_email"
+                      name="electronicMailAddress" or="electronicMailAddress"
+                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='distributor']/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address">
+                      <template>
+                        <snippet>
+                          <gmd:electronicMailAddress>
+                            <gco:CharacterString>@zamg.ac.at</gco:CharacterString>
+                          </gmd:electronicMailAddress>
+                        </snippet>
+                      </template>
+            </action>
+          </section>
+
+      </tab>
+      
+      <!-- Elements that should not use the "flat" mode --> 
+      <flatModeExceptions>
+        <!-- for name="gmd:descriptiveKeywords" />
+        <for name="gmd:keyword"/>
+        <for name="gmd:spatialResolution"/>
+        <for name="gmd:pointOfContact"/>
+        <for name="gmd:distributor"/>
+        <for name="gmd:contact"/>
+        <for name="gmd:processor"/>
+        <for name="gmd:topicCategory"/-->
+      </flatModeExceptions>
+
+    </view>
+
+
+
     <!--
     Customize the editor layout by adding a class attribute
     <view name="default" class="gn-indent-bluescale gn-label-above-input">-->

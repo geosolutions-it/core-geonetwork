@@ -40,6 +40,7 @@
 
   <xsl:include href="layout-custom-fields-keywords.xsl"/>
   <xsl:include href="layout-custom-fields-sds.xsl"/>
+  <xsl:include href="layout-custom-fields-ZAMG.xsl"/>
 
   <!-- Readonly elements -->
   <xsl:template mode="mode-iso19139" priority="2100" match="gmd:fileIdentifier|gmd:dateStamp">
