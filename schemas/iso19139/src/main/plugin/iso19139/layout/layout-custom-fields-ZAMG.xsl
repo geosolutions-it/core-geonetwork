@@ -214,132 +214,8 @@
     </xsl:call-template>
   </xsl:template>
 
-    <xsl:template mode="mode-iso19139"  priority="3000"
-                match="gmd:geographicElement/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:RS_Identifier[$tab='zamg_tab_simple1' or $tab='zamg_tab_simple2']">
 
-        <xsl:variable name="codenode"  select="gmd:code"/>
-        <xsl:variable name="coderef" select="$codenode/gco:CharacterString/gn:element/@ref"/>
-        <xsl:variable name="currentcode" select="normalize-space(string($codenode))"/>
-
-        <xsl:variable name="descnode"  select="$codenode/../../../../../gmd:description"/>
-        <xsl:variable name="descref" select="$descnode/gco:CharacterString/gn:element/@ref"/>
-        <xsl:variable name="currentdesc" select="normalize-space(string($descnode))"/>
-
-        <xsl:message>FOUND GEO IDENTIFIER <xsl:value-of select="$currentcode" /> on ref <xsl:value-of select="$coderef" /> at <xsl:value-of select="$currentdesc" /></xsl:message>
-
-        <xsl:variable name="labelThesaurus" select="/root/gui/schemas/iso19139/strings/zamgRegions.label"/>
-
-        <input class="md" type="hidden" id="zamg_region_code" name="_{$coderef}" value="{$currentcode}" readonly="true"/>
-        <input class="md" type="hidden" id="zamg_region_desc" name="_{$descref}" value="{$currentdesc}" readonly="true"/>
-
-        <div class="row">
-          <div class="col-xs-2" />
-          <label for="zamg_areas" class="control-label col-xs-2"><xsl:value-of select="/root/gui/schemas/iso19139/strings/zamgRegions.label" /></label>
-          <select id="zamg_areas" class="col-xs-4"></select>
-          <script>
-            $.ajax({
-              beforeSend: function(xhr){xhr.setRequestHeader("Accept", "application/json");},
-              url: "../api/registries/vocabularies/search?" +
-                   $.param(
-                        {"type": "CONTAINS",
-                         "thesaurus":  "external.place.regions",
-                         "rows": "200",
-                         "lang": "<xsl:value-of select="$lang" />"}
-                    )
-            }).done(function( json ) {
-
-                var optionTemplate = "WEST|EAST|SOUTH|NORTH|CODE|DESC";
-                var sel = false;
-                var areas = $('#zamg_areas');
-
-                for(id in json){
-                    var el = json[id];
-                    var areacode = el.uri.split("#")[1];
-                    var desc = el.value;
-
-                    var option = optionTemplate.replace("WEST",el.coordWest);
-                    option = option.replace("EAST",el.coordEast);
-                    option = option.replace("SOUTH",el.coordSouth);
-                    option = option.replace("NORTH",el.coordNorth);
-                    option = option.replace("CODE",areacode);
-                    option = option.replace("DESC", desc);
-
-                    areas.append(new Option(el.value, option));
-
-                    //$('#zamg_areas').append($("&lt;option/&gt;", {
-                    //    value: option,
-                    //    text: el.value['#text']
-                    //}));
-
-                    if(areacode == $('#zamg_region_code')[0].value) {
-                        areas.val(option);
-                        sel = true;
-                    }
-                }
-
-                areas.append(new Option('<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />', 'custom'));
-
-                //$('#zamg_areas').append($("&lt;option/&gt;", {
-                //    value: "custom",
-                //    text: "<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />"
-                //}));
-
-                if(! sel) {
-                    areas.val("custom");
-                }
-            });
-
-            // =============================================================================================================
-
-            var setCustom = function (){
-                $('#zamg_areas').val("custom");
-
-                $("#zamg_region_code").val('custom');
-                $("#zamg_region_desc").val('<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />');
-            }
-
-            $("#zamg_westBoundLongitude").find("input").change(setCustom);
-            $("#zamg_eastBoundLongitude").find("input").change(setCustom);
-            $("#zamg_southBoundLatitude").find("input").change(setCustom);
-            $("#zamg_northBoundLatitude").find("input").change(setCustom);
-
-            $( "#zamg_areas" ).change(function() {
-                var choice = $( "#zamg_areas" ).val();
-                var id = "";
-                var w = "";
-                var e = "";
-                var s = "";
-                var n = "";
-                var code = "custom";
-                var desc = "<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />";
-
-                if (choice != undefined) {
-                    coords = choice.split("|");
-
-                    if (coords.length == 6) {
-                        w = coords[0];
-                        e = coords[1];
-                        s = coords[2];
-                        n = coords[3];
-                        code = coords[4];
-                        desc = coords[5];
-
-                        $("#zamg_westBoundLongitude").find("input").val(w);
-                        $("#zamg_eastBoundLongitude").find("input").val(e);
-                        $("#zamg_southBoundLatitude").find("input").val(s);
-                        $("#zamg_northBoundLatitude").find("input").val(n);
-                    }
-                }
-
-                $("#zamg_region_code").val(code);
-                $("#zamg_region_desc").val(desc);
-            });
-        </script>
-      </div>
-  </xsl:template>
-
-
-  <xsl:template mode="mode-iso19139"  priority="3000"
+  <xsl:template mode="XXXmode-iso19139"  priority="3000"
     match="gmd:MD_Keywords[gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-datatype'] |
            gmd:MD_Keywords[gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-sourcetype'] |
            gmd:MD_Keywords[gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-uom']">
@@ -357,8 +233,8 @@
 
     <div class="row">
       <div class="col-xs-2" />
-      <xsl:variable name="value" select="gmd:keyword/gco:CharacterString/text()"/>
-      <xsl:variable name="ref" select="concat('_',gmd:keyword/gco:CharacterString/gn:element/@ref)"/>
+      <xsl:variable name="value" select="gmd:keyword/(gco:CharacterString|gmx:Anchor)/text()"/>
+      <xsl:variable name="ref" select="concat('_',gmd:keyword/(gco:CharacterString|gmx:Anchor)/gn:element/@ref)"/>
       <div>
         <xsl:comment>RENDERING KEYWORD CHOOSER FOR <xsl:value-of select="$tname"/> </xsl:comment>
         <xsl:call-template name="render-element">
@@ -368,13 +244,13 @@
             <xsl:with-param name="xpath" select="gn-fn-metadata:getXPath(.)"/>
             <xsl:with-param name="type" select="'select'"/>
             <xsl:with-param name="listOfValues" select="gn-fn-metadata:getCodeListValues($schema, '', $codelists, .)"/>
-            <xsl:with-param name="name" select="gmd:keyword/gco:CharacterString/gn:element/@ref"/>
-            <xsl:with-param name="editInfo" select="gmd:keyword/gco:CharacterString/gn:element"/>
+            <xsl:with-param name="name" select="gmd:keyword/(gco:CharacterString|gmx:Anchor)/gn:element/@ref"/>
+            <xsl:with-param name="editInfo" select="gmd:keyword/(gco:CharacterString|gmx:Anchor)/gn:element"/>
             <xsl:with-param name="parentEditInfo" select="gn:element"/>
             <xsl:with-param name="isDisabled" select="false()"/>
         </xsl:call-template>
       </div>
-      <xsl:variable name="id" select="concat('gn-field-',gmd:keyword/gco:CharacterString/gn:element/@ref)"/>
+      <xsl:variable name="id" select="concat('gn-field-',gmd:keyword/(gco:CharacterString|gmx:Anchor)/gn:element/@ref)"/>
       <script>
         $.ajax({
           beforeSend: function(xhr){xhr.setRequestHeader("Accept", "application/json");},
@@ -406,7 +282,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template mode="mode-iso19139"  priority="3000"
+  <xsl:template mode="XXXXXmode-iso19139"  priority="3000"
     match="gmd:MD_Keywords[gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-variable']">
 
     <xsl:variable name="labelName" select="gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()"/>
@@ -420,7 +296,7 @@
     <xsl:for-each select="gmd:keyword">
       <div class="row">
         <br />
-        <xsl:variable name="value" select="gco:CharacterString/text()"/>
+        <xsl:variable name="value" select="(gco:CharacterString|gmx:Anchor)/text()"/>
         <div>
           <xsl:call-template name="render-element">
             <xsl:with-param name="label" select="$labelThesaurus"/>
@@ -429,13 +305,13 @@
             <xsl:with-param name="xpath" select="gn-fn-metadata:getXPath(.)"/>
             <xsl:with-param name="type" select="'select'"/>
             <xsl:with-param name="listOfValues" select="gn-fn-metadata:getCodeListValues($schema, '', $codelists, .)"/>
-            <xsl:with-param name="name" select="gco:CharacterString/gn:element/@ref"/>
-            <xsl:with-param name="editInfo" select="gco:CharacterString/gn:element"/>
+            <xsl:with-param name="name" select="(gco:CharacterString|gmx:Anchor)/gn:element/@ref"/>
+            <xsl:with-param name="editInfo" select="(gco:CharacterString|gmx:Anchor)/gn:element"/>
             <xsl:with-param name="parentEditInfo" select="gn:element"/>
             <xsl:with-param name="isDisabled" select="false()"/>
           </xsl:call-template>
         </div>
-        <xsl:variable name="id" select="concat('gn-field-',gco:CharacterString/gn:element/@ref)"/>
+        <xsl:variable name="id" select="concat('gn-field-',(gco:CharacterString|gmx:Anchor)/gn:element/@ref)"/>
         <script>
         $.ajax({
           beforeSend: function(xhr){xhr.setRequestHeader("Accept", "application/json");},
@@ -589,6 +465,134 @@
           data-lang="lang"></div>
       </xsl:with-param>
     </xsl:call-template>
+  </xsl:template>
+
+  <!-- ===================================================================== -->
+  <!-- gmd:geographicElement -->
+  <!-- ===================================================================== -->
+
+    <xsl:template mode="mode-iso19139"  priority="3000"
+                match="gmd:geographicElement/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:RS_Identifier[$tab='zamg_tab_simple1' or $tab='zamg_tab_simple2']">
+
+        <xsl:variable name="codenode"  select="gmd:code"/>
+        <xsl:variable name="coderef" select="$codenode/gco:CharacterString/gn:element/@ref"/>
+        <xsl:variable name="currentcode" select="normalize-space(string($codenode))"/>
+
+        <xsl:variable name="descnode"  select="$codenode/../../../../../gmd:description"/>
+        <xsl:variable name="descref" select="$descnode/gco:CharacterString/gn:element/@ref"/>
+        <xsl:variable name="currentdesc" select="normalize-space(string($descnode))"/>
+
+        <xsl:message>FOUND GEO IDENTIFIER <xsl:value-of select="$currentcode" /> on ref <xsl:value-of select="$coderef" /> at <xsl:value-of select="$currentdesc" /></xsl:message>
+
+        <xsl:variable name="labelThesaurus" select="/root/gui/schemas/iso19139/strings/zamgRegions.label"/>
+
+        <input class="md" type="hidden" id="zamg_region_code" name="_{$coderef}" value="{$currentcode}" readonly="true"/>
+        <input class="md" type="hidden" id="zamg_region_desc" name="_{$descref}" value="{$currentdesc}" readonly="true"/>
+
+        <div class="row">
+          <div class="col-xs-2" />
+          <label for="zamg_areas" class="control-label col-xs-2"><xsl:value-of select="/root/gui/schemas/iso19139/strings/zamgRegions.label" /></label>
+          <select id="zamg_areas" class="col-xs-4"></select>
+          <script>
+            $.ajax({
+              beforeSend: function(xhr){xhr.setRequestHeader("Accept", "application/json");},
+              url: "../api/registries/vocabularies/search?" +
+                   $.param(
+                        {"type": "CONTAINS",
+                         "thesaurus":  "external.place.regions",
+                         "rows": "200",
+                         "lang": "<xsl:value-of select="$lang" />"}
+                    )
+            }).done(function( json ) {
+
+                var optionTemplate = "WEST|EAST|SOUTH|NORTH|CODE|DESC";
+                var sel = false;
+                var areas = $('#zamg_areas');
+
+                for(id in json){
+                    var el = json[id];
+                    var areacode = el.uri.split("#")[1];
+                    var desc = el.value;
+
+                    var option = optionTemplate.replace("WEST",el.coordWest);
+                    option = option.replace("EAST",el.coordEast);
+                    option = option.replace("SOUTH",el.coordSouth);
+                    option = option.replace("NORTH",el.coordNorth);
+                    option = option.replace("CODE",areacode);
+                    option = option.replace("DESC", desc);
+
+                    areas.append(new Option(el.value, option));
+
+                    //$('#zamg_areas').append($("&lt;option/&gt;", {
+                    //    value: option,
+                    //    text: el.value['#text']
+                    //}));
+
+                    if(areacode == $('#zamg_region_code')[0].value) {
+                        areas.val(option);
+                        sel = true;
+                    }
+                }
+
+                areas.append(new Option('<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />', 'custom'));
+
+                //$('#zamg_areas').append($("&lt;option/&gt;", {
+                //    value: "custom",
+                //    text: "<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />"
+                //}));
+
+                if(! sel) {
+                    areas.val("custom");
+                }
+            });
+
+            // =============================================================================================================
+
+            var setCustom = function (){
+                $('#zamg_areas').val("custom");
+
+                $("#zamg_region_code").val('custom');
+                $("#zamg_region_desc").val('<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />');
+            }
+
+            $("#zamg_westBoundLongitude").find("input").change(setCustom);
+            $("#zamg_eastBoundLongitude").find("input").change(setCustom);
+            $("#zamg_southBoundLatitude").find("input").change(setCustom);
+            $("#zamg_northBoundLatitude").find("input").change(setCustom);
+
+            $( "#zamg_areas" ).change(function() {
+                var choice = $( "#zamg_areas" ).val();
+                var id = "";
+                var w = "";
+                var e = "";
+                var s = "";
+                var n = "";
+                var code = "custom";
+                var desc = "<xsl:value-of select="/root/gui/schemas/iso19139/strings/zamg_custom" />";
+
+                if (choice != undefined) {
+                    coords = choice.split("|");
+
+                    if (coords.length == 6) {
+                        w = coords[0];
+                        e = coords[1];
+                        s = coords[2];
+                        n = coords[3];
+                        code = coords[4];
+                        desc = coords[5];
+
+                        $("#zamg_westBoundLongitude").find("input").val(w);
+                        $("#zamg_eastBoundLongitude").find("input").val(e);
+                        $("#zamg_southBoundLatitude").find("input").val(s);
+                        $("#zamg_northBoundLatitude").find("input").val(n);
+                    }
+                }
+
+                $("#zamg_region_code").val(code);
+                $("#zamg_region_desc").val(desc);
+            });
+        </script>
+      </div>
   </xsl:template>
 
 

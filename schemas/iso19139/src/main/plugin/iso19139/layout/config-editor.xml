@@ -3172,6 +3172,26 @@
         <directive data-gn-onlinesrc-list=""/>
       </sidePanel>
 
+       <thesaurusList>
+           <thesaurus key="external.theme.zamg-sourcetype"
+                      maxtags="1"
+                      lang='{"ger":"#DE","eng":"#EN"}'
+                      fieldset="false"
+                      transformations="to-iso19139-keyword-with-anchor"/>
+           <thesaurus key="external.theme.zamg-datatype"
+                      maxtags="1"
+                      fieldset="false"
+                      transformations="to-iso19139-keyword-with-anchor"/>
+           <thesaurus key="external.theme.zamg-uom"
+                      maxtags="1"
+                      fieldset="false"
+                      transformations="to-iso19139-keyword-with-anchor"/>
+           <thesaurus key="external.theme.zamg-variable"
+                      fieldset="false"
+                      transformations="to-iso19139-keyword-with-anchor"/>
+        </thesaurusList>
+
+
       <tab id="zamg_tab_simple1" default="true" mode="flat">
           <section name="zamgtabdata">
             <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title" />
@@ -3181,23 +3201,11 @@
 
           <section name="zamgtabvar">
 
-            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-uom']" />
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/(gco:CharacterString|gmx:Anchor)/text()='geonetwork.thesaurus.external.theme.zamg-uom']" />
             <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-sourcetype']" />
             <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-datatype']" />
 
-            <field del="../." xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-variable']" />
-            <action type="add"
-                      btnLabel="zamg_btn_add_variable"
-                      name="keyword" or="keyword"
-                      in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords">
-                      <template>
-                        <snippet>
-                          <gmd:keyword>
-                            <gco:CharacterString>temperature</gco:CharacterString>
-                         </gmd:keyword>
-                        </snippet>
-                      </template>
-            </action>
+            <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[./gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor/text()='geonetwork.thesaurus.external.theme.zamg-variable']" />
 
           </section>
           <section name="zamgtabext">

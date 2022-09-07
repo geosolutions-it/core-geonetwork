@@ -347,7 +347,7 @@
                                 <xsl:variable name="zamg-concepts" select="$zamg-thesaurus//skos:Concept"/>
                                 <!--<xsl:message>ZAMG thesaurus <xsl:value-of select="$basename"/> has <xsl:value-of select="count($zamg-concepts)"/> concepts</xsl:message>-->
 
-                                <xsl:for-each select="gmd:keyword/gco:CharacterString">
+                                <xsl:for-each select="gmd:keyword/(gco:CharacterString|gmx:Anchor)">
                                     <xsl:variable name="keyword" select="string(.)"/>
 
                                     <xsl:variable name="uri-from-altlabel"  select="$zamg-concepts[skos:altLabel = $keyword]/@rdf:about"/>
