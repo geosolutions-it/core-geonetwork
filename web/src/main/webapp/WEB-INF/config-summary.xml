@@ -133,6 +133,9 @@
     <facet name="maintenanceAndUpdateFrequency" indexKey="cl_maintenanceAndUpdateFrequency"
            label="maintenanceAndUpdateFrequencies"/>
     <facet name="mdActions" indexKey="_mdActions" label="mdActions"/>
+
+    <facet name="pubblicaAmministrazione" indexKey="pa" label="pubblicaAmministrazione"/>
+    <facet name="iPA" indexKey="ipa" label="iPA"/>
   </facets>
 
   <summaryTypes>
@@ -158,6 +161,9 @@
       <item facet="serviceType"/>
       <item facet="denominator" sortBy="numValue" sortOrder="desc"/>
       <item facet="resolution" sortBy="numValue" sortOrder="desc"/>
+
+      <item facet="pubblicaAmministrazione"/>
+
       <!--
       <item facet="region"
             translator="term:http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox"/>
@@ -185,6 +191,8 @@
       <item facet="isHarvested" max="2" sortBy="value" translator="apploc:"/>
       <item facet="metadataType" max="3" sortBy="value" translator="apploc:recordType-"/>
 	    <item facet="isPublishedToAll" max="2" sortBy="value" translator="apploc:"/>
+
+      <item facet="pubblicaAmministrazione" max="50"/>
     </summaryType>
 
     <!-- (deprecated) old-style configuration supporting only
@@ -209,6 +217,8 @@
       <item facet="serviceType"/>
       <item facet="denominator" sortBy="numValue" sortOrder="desc"/>
       <item facet="resolution" sortBy="numValue" sortOrder="desc"/>
+
+      <item facet="pubblicaAmministrazione"/>
       <!--<item facet="metadataPOC" max="15"/>-->
     </summaryType>
     <summaryType name="subtemplates">
