@@ -594,6 +594,11 @@
     </dependency>
     <dependency>
       <groupId>org.geonetwork-opensource.schemas</groupId>
+      <artifactId>schema-iso19139.rndt</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geonetwork-opensource.schemas</groupId>
       <artifactId>schema-csw-record</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -992,6 +997,13 @@
                       <overWrite>false</overWrite>
                       <outputDirectory>${schema-plugins.dir}</outputDirectory>
                     </artifactItem>
+                    <artifactItem>
+                      <groupId>org.geonetwork-opensource.schemas</groupId>
+                      <artifactId>schema-iso19139.rndt</artifactId>
+                      <type>zip</type>
+                      <overWrite>false</overWrite>
+                      <outputDirectory>${schema-plugins.dir}</outputDirectory>
+                    </artifactItem>                    
                     <artifactItem>
                       <groupId>org.geonetwork-opensource.schemas</groupId>
                       <artifactId>schema-csw-record</artifactId>
