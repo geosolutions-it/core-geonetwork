@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <skos:ConceptScheme xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue">
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">INSPIRE Protocol values</dc:title>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="it">INSPIRE Protocol values</dc:title>
+    <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Set of OGC and RFC services that are in the scope of INSPIRE. This list aims at the better identification of the network services described within the metadata records. THIS IS NOT THE ORIGINAL INSPIRE FILE. Labels have modified according to RNDT XSL conversion file. Download and link items have been added.</dc:description>
+    <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="it">Set of OGC and RFC services that are in the scope of INSPIRE. This list aims at the better identification of the network services described within the metadata records. THIS IS NOT THE ORIGINAL INSPIRE FILE. Labels have modified according to RNDT XSL conversion file. Download and link items have been added.</dc:description>
+    <dcterms:issued xmlns:dcterms="http://purl.org/dc/terms/">2020-11-02T20:02:41</dcterms:issued>
+    <dcterms:modified xmlns:dcterms="http://purl.org/dc/terms/">2020-11-02T20:02:41</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.opengis.net/def/serviceType/ogc/csw">
+    <skos:prefLabel xml:lang="en">Catalogue Service for the Web (CSW)</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Catalogue Service for the Web (CSW)</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.opengis.net/def/serviceType/ogc/sos">
+    <skos:prefLabel xml:lang="en">Sensor Observation Service (SOS)</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Sensor Observation Service (SOS)</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.opengis.net/def/serviceType/ogc/wcs">
+    <skos:prefLabel xml:lang="en">Web Coverage Service (WCS)</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Web Coverage Service (WCS)</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.opengis.net/def/serviceType/ogc/wfs">
+    <skos:prefLabel xml:lang="en">Web Feature Service (WFS)</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Web Feature Service (WFS)</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.opengis.net/def/serviceType/ogc/wms">
+    <skos:prefLabel xml:lang="en">Web Map Service (WMS)</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Web Map Service (WMS)</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.opengis.net/def/serviceType/ogc/wmts">
+    <skos:prefLabel xml:lang="en">Web Map Tile Service (WMTS)</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Web Map Tile Service (WMTS)</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="https://tools.ietf.org/html/rfc4287">
+    <skos:prefLabel xml:lang="en">ATOM</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">ATOM</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="https://registry.geodati.gov.it/metadata-codelist/ProtocolValue/www-download">
+    <skos:prefLabel xml:lang="en">WWW:DOWNLOAD-1.0-http--download</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">WWW:DOWNLOAD-1.0-http--download</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.w3.org/TR/xlink/">
+    <skos:prefLabel xml:lang="en">WWW:LINK-1.0-http--link</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">WWW:LINK-1.0-http--link</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue"/>
+  </skos:Concept>
+</rdf:RDF>

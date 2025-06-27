@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <skos:ConceptScheme xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse">
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Conditions Applying To Access and Use</dc:title>
+    <dcterms:issued xmlns:dcterms="http://purl.org/dc/terms/">2020-10-30T16:58:34</dcterms:issued>
+    <dcterms:modified xmlns:dcterms="http://purl.org/dc/terms/">2020-10-30T16:58:34</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply">
+    <skos:prefLabel xml:lang="en">no conditions to access and use</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">No conditions apply to access and use.</skos:scopeNote>
+    <skos:prefLabel xml:lang="it">Nessuna condizione applicabile</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse" />
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/conditionsUnknown">
+    <skos:prefLabel xml:lang="en">conditions to access and use unknown</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">The conditions applying to access and use are unknown.</skos:scopeNote>
+    <skos:prefLabel xml:lang="it">Condizioni sconosciute</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse" />
+  </skos:Concept>
+</rdf:RDF>

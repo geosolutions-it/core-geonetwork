@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <skos:ConceptScheme xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="https://registry.geodati.gov.it/rndt-all1">
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="it">Registro dei dati di interesse generale per il RNDT</dc:title>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">Register of the reference data sets for RNDT</dc:title>
+    <dcterms:issued xmlns:dcterms="http://purl.org/dc/terms/">2018-06-25</dcterms:issued>
+    <dcterms:modified xmlns:dcterms="http://purl.org/dc/terms/">2018-06-25</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-1">
+    <skos:prefLabel xml:lang="it">Acque sotterranee</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-2">
+    <skos:prefLabel xml:lang="it">Acque territoriali e linea di base</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-3">
+    <skos:prefLabel xml:lang="it">Altre aree vincolate o regolamentate</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-4">
+    <skos:prefLabel xml:lang="it">Altre unità statistiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-5">
+    <skos:prefLabel xml:lang="it">Altri  dati da telerilevamento</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-6">
+    <skos:prefLabel xml:lang="it">Annali idrologici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-7">
+    <skos:prefLabel xml:lang="it">Sistema di Registri forestale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-8">
+    <skos:prefLabel xml:lang="it">Aree e specie faunistiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-9">
+    <skos:prefLabel xml:lang="it">Aree e Specie Vegetali</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-10">
+    <skos:prefLabel xml:lang="it">Aree percorse da incendio sottoposte a vincolo</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-11">
+    <skos:prefLabel xml:lang="it">Aree Vinicole, DOC, IGT</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-12">
+    <skos:prefLabel xml:lang="it">Atlante eolico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-13">
+    <skos:prefLabel xml:lang="it">Aziende agricole</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-14">
+    <skos:prefLabel xml:lang="it">Bacini idrografici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-15">
+    <skos:prefLabel xml:lang="it">Beni culturali ambientali</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-16">
+    <skos:prefLabel xml:lang="it">Carta dei suoli</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-17">
+    <skos:prefLabel xml:lang="it">Carta dell’utilizzazione del suolo</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-18">
+    <skos:prefLabel xml:lang="it">Carta delle esposizioni, clivometria, delle pendenze</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-19">
+    <skos:prefLabel xml:lang="it">Carta di Pericolosità sismica disaggregata secondo la Magnitudo e la distanza dei comuni italiani</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-20">
+    <skos:prefLabel xml:lang="it">Carta Geologica</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-21">
+    <skos:prefLabel xml:lang="it">Carta tecnica regionale numerica</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-22">
+    <skos:prefLabel xml:lang="it">Carte corografiche  – IGM</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-23">
+    <skos:prefLabel xml:lang="it">Carte della Pericolosità sismica di riferimento per il territorio nazionale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-24">
+    <skos:prefLabel xml:lang="it">Carte di copertura ed uso del suolo</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-25">
+    <skos:prefLabel xml:lang="it">Carte di rischio sismico dei comuni italiani</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-26">
+    <skos:prefLabel xml:lang="it">Carte di vulnerabilità sismica dei comuni italiani</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-27">
+    <skos:prefLabel xml:lang="it">Carte Geotematiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-28">
+    <skos:prefLabel xml:lang="it">Carte tematiche di copertura vegetale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-29">
+    <skos:prefLabel xml:lang="it">Carte topografiche - IGM</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-30">
+    <skos:prefLabel xml:lang="it">Cartografie storiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-31">
+    <skos:prefLabel xml:lang="it">Cartografie storiche militari</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-32">
+    <skos:prefLabel xml:lang="it">Cave e miniere</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-33">
+    <skos:prefLabel xml:lang="it">Centri di rottamazione</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-34">
+    <skos:prefLabel xml:lang="it">Classificazione sismica dei comuni italiani</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-35">
+    <skos:prefLabel xml:lang="it">Data Base degli strati prioritari</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-36">
+    <skos:prefLabel xml:lang="it">Data Base Oceanografico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-37">
+    <skos:prefLabel xml:lang="it">Data Base topografici a grande e grandissima scala</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-38">
+    <skos:prefLabel xml:lang="it">Data Base topografici a media scala (1:25.000 – 1:50.000)</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-39">
+    <skos:prefLabel xml:lang="it">Dati aggregati della popolazione su unità amministrative e/o statistiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-40">
+    <skos:prefLabel xml:lang="it">Dati del monitoraggio ambientale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-41">
+    <skos:prefLabel xml:lang="it">Dati orografici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-42">
+    <skos:prefLabel xml:lang="it">DB grid</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-43">
+    <skos:prefLabel xml:lang="it">Depuratori e collettori</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-44">
+    <skos:prefLabel xml:lang="it">Discariche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-45">
+    <skos:prefLabel xml:lang="it">Edifici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-46">
+    <skos:prefLabel xml:lang="it">Erosione costiera</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-47">
+    <skos:prefLabel xml:lang="it">Farmacie</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-48">
+    <skos:prefLabel xml:lang="it">Frame campionamento griglie</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-49">
+    <skos:prefLabel xml:lang="it">Frame campionamento griglie</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-50">
+    <skos:prefLabel xml:lang="it">Ghiacciai</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-51">
+    <skos:prefLabel xml:lang="it">Griglie di inquadramento</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-52">
+    <skos:prefLabel xml:lang="it">Habitat</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-53">
+    <skos:prefLabel xml:lang="it">Immagini non ortorettificate</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-54">
+    <skos:prefLabel xml:lang="it">Impianti a rischio di incidente rilevante</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-55">
+    <skos:prefLabel xml:lang="it">Impianti di pesca, maricoltura</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-56">
+    <skos:prefLabel xml:lang="it">Impianti di sondaggio per acqua e idrocarburi</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-57">
+    <skos:prefLabel xml:lang="it">Impianti e strutture ricettive</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-58">
+    <skos:prefLabel xml:lang="it">Impianti e strutture ricreative e sportive</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-59">
+    <skos:prefLabel xml:lang="it">Indirizzi e numeri civici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-60">
+    <skos:prefLabel xml:lang="it">Limiti amministrativi</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-61">
+    <skos:prefLabel xml:lang="it">Limiti ASL e distretti sanitari</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-62">
+    <skos:prefLabel xml:lang="it">Limiti Autorità di bacino</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-63">
+    <skos:prefLabel xml:lang="it">Limiti Consorzi di bonifica</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-64">
+    <skos:prefLabel xml:lang="it">Località abitata</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-65">
+    <skos:prefLabel xml:lang="it">Località produttiva</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-66">
+    <skos:prefLabel xml:lang="it">Modelli digitali di elevazione</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-67">
+    <skos:prefLabel xml:lang="it">Modello strutturale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-68">
+    <skos:prefLabel xml:lang="it">Monografie carotaggi geologici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-69">
+    <skos:prefLabel xml:lang="it">Ortofoto aeree</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-70">
+    <skos:prefLabel xml:lang="it">Ortofoto satellitari</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-71">
+    <skos:prefLabel xml:lang="it">Parametri di identificazione sismica di norma (ag, F0,Tc)</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-72">
+    <skos:prefLabel xml:lang="it">Parchi e Aree protette</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-73">
+    <skos:prefLabel xml:lang="it">Particelle catastali</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-74">
+    <skos:prefLabel xml:lang="it">Pericolosità e rischio idrogeologico (alluvioni, frane, esondazioni, ecc.)</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-75">
+    <skos:prefLabel xml:lang="it">Piattaforme</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-76">
+    <skos:prefLabel xml:lang="it">Repertorio naturalistico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-77">
+    <skos:prefLabel xml:lang="it">Repertorio toponomastica</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-78">
+    <skos:prefLabel xml:lang="it">Rete accelero metrica nazionale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-79">
+    <skos:prefLabel xml:lang="it">Rete sismica nazionale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-80">
+    <skos:prefLabel xml:lang="it">Reti  geodetiche e monografie di elementi geodetici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-81">
+    <skos:prefLabel xml:lang="it">Reti di trasporto</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-82">
+    <skos:prefLabel xml:lang="it">Reti tecnologiche marine</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-83">
+    <skos:prefLabel xml:lang="it">Reti tecnologiche terrestri</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-84">
+    <skos:prefLabel xml:lang="it">Reticolo idrografico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-85">
+    <skos:prefLabel xml:lang="it">Rischio incendio</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-86">
+    <skos:prefLabel xml:lang="it">Rischio vulcanico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-87">
+    <skos:prefLabel xml:lang="it">Risorse idriche per agricoltura</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-88">
+    <skos:prefLabel xml:lang="it">Scuole</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-89">
+    <skos:prefLabel xml:lang="it">Sedi istituzionali</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-90">
+    <skos:prefLabel xml:lang="it">Sezioni di censimento</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-91">
+    <skos:prefLabel xml:lang="it">Sistemi di coordinate</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-92">
+    <skos:prefLabel xml:lang="it">Siti archeologici e/o paleontologici</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-93">
+    <skos:prefLabel xml:lang="it">Siti di Importanza Comunitaria, Zone di Protezione Speciale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-94">
+    <skos:prefLabel xml:lang="it">Siti protezione civile</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-95">
+    <skos:prefLabel xml:lang="it">Sorgenti</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-96">
+    <skos:prefLabel xml:lang="it">Specchi d’acqua</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-97">
+    <skos:prefLabel xml:lang="it">Stazioni di rilevamento idrometeorologiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-98">
+    <skos:prefLabel xml:lang="it">Stazioni e reti di monitoraggio e rilevazione ambientale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-99">
+    <skos:prefLabel xml:lang="it">Stazioni meteo, sensori, radar, punti di misurazione, ecc</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-100">
+    <skos:prefLabel xml:lang="it">Stradari</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-101">
+    <skos:prefLabel xml:lang="it">Strutture e distretti sanitari</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-102">
+    <skos:prefLabel xml:lang="it">Strutture ospedaliere</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-103">
+    <skos:prefLabel xml:lang="it">Unità fisiografiche</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-104">
+    <skos:prefLabel xml:lang="it">Valanghe</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-105">
+    <skos:prefLabel xml:lang="it">Vincoli paesaggistico, archeologico ed architettonico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-106">
+    <skos:prefLabel xml:lang="it">Vincolo ambientale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-107">
+    <skos:prefLabel xml:lang="it">Vincolo idrogeologico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-108">
+    <skos:prefLabel xml:lang="it">Zonazione urbanistico territoriale</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-109">
+    <skos:prefLabel xml:lang="it">Zone di allertamento per il rischio idrogeologico e idraulico</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://registry.geodati.gov.it/rndt-all1/rndt-all1-110">
+    <skos:prefLabel xml:lang="it">Zonizzazione acustica</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>
+
